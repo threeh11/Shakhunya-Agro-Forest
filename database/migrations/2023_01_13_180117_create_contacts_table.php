@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('naming')->unique();
             $table->string('legal_address')->unique();
-            $table->string('OGRN');
-            $table->string('INN');
-            $table->string('KPP');
+            $table->string('OGRN')->unique();
+            $table->string('INN')->unique();
+            $table->string('KPP')->unique();
             $table->date('date_reg')->unique()->default('03.03.2011');
         });
     }
