@@ -15,5 +15,6 @@
     },
     "dependencies": {
         "jquery": "^3.6.3"
+        "daisyui": "^2.46.1"
     }
 }
