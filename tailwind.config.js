@@ -7,6 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    colors:
+    {
+      'black': '#333333',
+      'greyLight': '#CCCCCC',
+      'white': '#FFFFFF',
+      'head': '#FAFAFA',
+      'grey': '#707070'
+    }
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
