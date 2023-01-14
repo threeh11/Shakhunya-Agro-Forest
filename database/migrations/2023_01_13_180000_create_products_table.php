@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('price')->default('Цена договорная');
             $table->string('city')->default('Йошкар-ола');
             $table->mediumText('description');
-            $table->string('path_to_images');
+            $table->mediumText('path_to_images');
             $table->float('rating', 1, 1, true)->default(0.0);
         });
     }
@@ -29,7 +29,7 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('products');
     }
