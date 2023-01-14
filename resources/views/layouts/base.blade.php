@@ -11,7 +11,7 @@
 <body class="flex min-h-screen flex-col justify-between">
     @include('includes.header')
     @yield('content')
-    <footer class="flex bg-[#FAFAFA]">
+    <footer class="flex bg-head">
         @include('includes.footer')
     </footer>
 </body>
