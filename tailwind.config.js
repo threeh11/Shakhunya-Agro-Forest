@@ -6,8 +6,13 @@ module.exports = {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
-    colors: {'head': '#FAFAFA'}
+    extend: {
+      fontFamily: 
+      {
+        Manrope: ['Manrope'],
+      },
+    },
+    colors: {'head': '#FAFAFA', 'gray': '#707070', 'black': '#333333'}
   },
   plugins: [],
 }
