@@ -1,12 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
-        "./resources/**/*.blade.php",
-        "./resources/**/*.js",
-        "./resources/**/*.vue",
-    ],
+  content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
+  ],
   theme: {
-    extend: {},
+    screens: {
+      'sm': {'max':'640px'},
+      'md': {'max':'768px'},
+      'lg': {'max':'1024px'},
+      'xl': {'max':'1280px'},
+      '2xl': {'max':'1536px'},
+    },
+    extend: {
+      fontFamily: 
+      {
+        Manrope: ['Manrope'],
+      },
+    },
+    colors: {'head': '#FAFAFA', 'gray': '#707070', 'black': '#333333'}
   },
   plugins: [],
 }
