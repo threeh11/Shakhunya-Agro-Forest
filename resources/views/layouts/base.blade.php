@@ -5,13 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite('resources/css/app.css')
     <title>@yield('title', env('APP_NAME'))</title>
 </head>
-<body>
+<body class="h-[200vh] flex min-h-screen flex-col justify-between">
     @include('includes.header')
     @yield('content')
     @include('includes.footer')
 </body>
 </html>
-adasdsa
