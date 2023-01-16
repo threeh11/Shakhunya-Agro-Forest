@@ -8,7 +8,7 @@
     @vite('resources/css/app.css')
     <title>@yield('title', env('APP_NAME'))</title>
 </head>
-<body class="h-[200vh] flex min-h-screen flex-col justify-between">
+<body class="h-screen flex min-h-screen flex-col justify-between">
     @include('includes.header')
     @yield('content')
     @include('includes.footer')
