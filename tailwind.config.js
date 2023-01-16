@@ -19,7 +19,7 @@ module.exports = {
         Manrope: ['Manrope'],
       },
     },
-    colors: {'head': '#FAFAFA', 'gray': '#707070', 'black': '#333333'}
+    colors: {'head': '#FAFAFA', 'gray': '#707070', 'black': '#333333', 'accent': '#FFED4E', 'orange': '#f97316', 'grayUltraLight': '#E7E7E7', 'grayLight': '#CCCCCC'}
   },
   plugins: [],
 }

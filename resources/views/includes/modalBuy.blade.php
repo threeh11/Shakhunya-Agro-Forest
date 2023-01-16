@@ -1,4 +1,4 @@
-<div class="drop-shadow-2xl pt-5 w-[500px] h-[714px] left-[23%] top-[23%] fixed block rounded-xl bg-[#FFFFFF] ">
+<div class="drop-shadow-2xl pt-5 w-[500px] h-[714px] left-[23%] top-[23%] fixed rounded-xl bg-[#FFFFFF] ">
     <p class="mx-2.5 color-[#333333] leading-8 text-2xl font-normal font-[Manrope]">
         Оптовый заказ производителю
     </p>
@@ -25,7 +25,7 @@
                 Текст заказа
             </p>
             <input class="mx-2.5 w-[90%] h-32 border rounded border-solid border-[#CCCCCC]" type="text">
-            <div class="mx-2.5 my-2.5 w-[60%] h-11 float-left text-center rounded bg-yellow-300">
+            <div class="mx-2.5 my-2.5 w-[60%] h-11 float-left text-center rounded bg-accent">
                 <p class="mx-2.5 my-2.5 w-[90%] color-[#333333] font-[Manrope] text-base font-normal">
                     Отправить
                 </p>
