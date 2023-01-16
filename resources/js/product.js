@@ -83,7 +83,7 @@ function remoteOther(nameMain) {
             $('#contactsMenu')
                 .addClass('border-[#E7E7E7]')
                 .removeClass('border-[#FFED4E]');
-        }
+        } break;
     }
 }
 function getDescription() {
@@ -116,7 +116,7 @@ function getQuestions() {
     $('#questionBlock')
         .removeClass('hidden')
         .addClass('block');
-    remoteOther('desc');
+    remoteOther('question');
 }
 
 function getContacts() {
@@ -127,7 +127,7 @@ function getContacts() {
     $('#contactsBlock')
         .removeClass('hidden')
         .addClass('block');
-    remoteOther('review');
+    remoteOther('contacts');
 }
 
 $(document).ready(function() {
@@ -143,4 +143,9 @@ $(document).ready(function() {
     $('#contactsMenu').click(function (){
         getContacts();
     });
+    $('#buttonBuy').click(function (){
+        $('#modalBuy')
+            .removeClass('hidden')
+            .addClass('block');
+    })
 });
