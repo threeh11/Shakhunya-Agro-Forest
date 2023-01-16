@@ -130,7 +130,20 @@ function getContacts() {
     remoteOther('contacts');
 }
 
+(function($){
+    $.fn.extend({
+        center: function () {
+            return this.each(function() {
+                let top = ($(window).height() - $(this).outerHeight()) / 2;
+                let left = ($(window).width() - $(this).outerWidth()) / 2;
+                $(this).css({position:'absolute', margin:0, top: (top > 0 ? top : 0)+'px', left: (left > 0 ? left : 0)+'px'});
+            });
+        }
+    });
+})(jQuery);
+
 $(document).ready(function() {
+    $('#modalBuy').center();
     $('#descriptionMenu').click(function (){
         getDescription();
     });
@@ -148,4 +161,11 @@ $(document).ready(function() {
             .removeClass('hidden')
             .addClass('block');
     })
+    $('#closeModal').click(function (){
+        $('#modalBuy')
+            .removeClass('block')
+            .addClass('hidden')
+    })
 });
+
+
