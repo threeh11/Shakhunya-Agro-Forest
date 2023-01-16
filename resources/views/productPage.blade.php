@@ -94,22 +94,22 @@
                       </div>
                 </div>
                 <div class="flex flex-row">
-                    <input class="mr-2.5 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" placeholder="Имя" type="text">
-                    <input class="mx-2.5 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" placeholder="Телефон" type="tel">
-                    <input class="ml-2.5 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" placeholder="Электронная почта" type="email">
+                    <input class="mr-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" placeholder="Имя" type="text">
+                    <input class="mx-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" placeholder="Телефон" type="tel">
+                    <input class="ml-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" placeholder="Электронная почта" type="email">
                 </div>
-                <p class="my-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
+                <p class="my-2.5 p-3 font-['Manrope'] text-base font-bold leading-5 text-black">
                     Преимущества
                 </p>
-                <textarea class="h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
+                <textarea class="p-3 h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
                 <p class="my-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
                     Недостатки
                 </p>
-                <textarea class="h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
+                <textarea class="p-3 pt-3 h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
                 <p class="my-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
                     Комментарий
                 </p>
-                <textarea class="h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
+                <textarea class="p-3 pt-3 h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
                 <div class="my-2.5 w-[60%] h-11 float-left text-center rounded bg-accent">
                     <p class="mx-2.5 my-2.5 w-[90%] text-black font-[Manrope] text-base font-normal cursor-pointer">
                         Отправить
@@ -118,10 +118,10 @@
             </div>
         </div>
         <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="questionBlock">
-            {{ $product->description }}
+            {{ $reviews }}
         </div>
         <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="contactsBlock">
-            {{ $product->description }}
+            {{ $contacts[0]->email }}
         </div>
     </x-content>
 
