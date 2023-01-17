@@ -45,12 +45,12 @@
                 Контакты
             </x-h3menu>
         </div>
-        <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="descriptionBlock">
+        <div class=" pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="descriptionBlock">
             {{ $product->description }}
         </div>
+
         <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="reviewsBlock">
-            {{ $product->description }}
-            <div class="flex flex-col my-2.5 border-t-2 border-grayUltraLight ">
+            <div class="flex flex-col my-2.5">
                 <p class="my-2.5 font-['Manrope'] text-2xl font-normal leading-8 text-black">
                     Написать отзыв
                 </p>
