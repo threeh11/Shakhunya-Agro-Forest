@@ -1,6 +1,9 @@
 @extends('layouts.base')
 
 @include('includes.modalBuy')
+<div class="hidden" id="placePhoto">
+    <img id="showImage" alt="photo" src="" width="700px" height="600px"/>
+</div>
 
 @section('content')
     <x-content @class(['mt-10'])>
@@ -78,7 +81,7 @@
                 </p>
                 <p class="font-['Manrope'] font-normal leading-4 text-base text-black">
                     <! -- Текст комментария-->
-                    Всё на лучшем уровне! Работой компании и менеджеров доволен, всё грамотно объяснили, 
+                    Всё на лучшем уровне! Работой компании и менеджеров доволен, всё грамотно объяснили,
                     заказ на деревянные поддоны пришёл в срок. Качеством и ценой деревянных поддонов доволен.
                      Всем советую!
                 </p>
@@ -183,7 +186,7 @@
                 </div>
             </div>
         </div>
-        <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="contactsBlock">
+        <div class="block pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="contactsBlock">
             <div class="grid grid-cols-2">
                 <p class="mt-2.5 mb-1.5 bg-black my-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
                     Телефон
@@ -217,7 +220,7 @@
                     Дата регистрации
                 </p>
                 {{ $contacts[0]->date_reg }}
-            </div>    
+            </div>
             {{ $contacts[0]->email }}
         </div>
     </x-content>
