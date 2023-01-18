@@ -83,7 +83,7 @@ function remoteOther(nameMain) {
             $('#contactsMenu')
                 .addClass('border-[#E7E7E7]')
                 .removeClass('border-[#FFED4E]');
-        }
+        } break;
     }
 }
 function getDescription() {
@@ -116,7 +116,7 @@ function getQuestions() {
     $('#questionBlock')
         .removeClass('hidden')
         .addClass('block');
-    remoteOther('desc');
+    remoteOther('question');
 }
 
 function getContacts() {
@@ -127,10 +127,23 @@ function getContacts() {
     $('#contactsBlock')
         .removeClass('hidden')
         .addClass('block');
-    remoteOther('review');
+    remoteOther('contacts');
 }
 
+(function($){
+    $.fn.extend({
+        center: function () {
+            return this.each(function() {
+                let top = ($(window).height() - $(this).outerHeight()) / 2;
+                let left = ($(window).width() - $(this).outerWidth()) / 2;
+                $(this).css({position:'absolute', margin:0, top: (top > 0 ? top : 0)+'px', left: (left > 0 ? left : 0)+'px'});
+            });
+        }
+    });
+})(jQuery);
+
 $(document).ready(function() {
+    $('#modalBuy').center();
     $('#descriptionMenu').click(function (){
         getDescription();
     });
@@ -143,4 +156,16 @@ $(document).ready(function() {
     $('#contactsMenu').click(function (){
         getContacts();
     });
+    $('#buttonBuy').click(function (){
+        $('#modalBuy')
+            .removeClass('hidden')
+            .addClass('block');
+    })
+    $('#closeModal').click(function (){
+        $('#modalBuy')
+            .removeClass('block')
+            .addClass('hidden')
+    })
 });
+
+

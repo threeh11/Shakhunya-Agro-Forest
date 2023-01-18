@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * @method static create(array $array)
+ */
 class Order extends Model
 {
     use HasFactory;
@@ -15,6 +18,7 @@ class Order extends Model
         'number',
         'email',
         'text_order',
+        'product_id'
     ];
 
     public function product(): BelongsTo
