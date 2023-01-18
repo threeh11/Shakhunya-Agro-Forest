@@ -130,20 +130,66 @@ function getContacts() {
     remoteOther('contacts');
 }
 
-(function($){
-    $.fn.extend({
-        center: function () {
-            return this.each(function() {
-                let top = ($(window).height() - $(this).outerHeight()) / 2;
-                let left = ($(window).width() - $(this).outerWidth()) / 2;
-                $(this).css({position:'absolute', margin:0, top: (top > 0 ? top : 0)+'px', left: (left > 0 ? left : 0)+'px'});
+$.fn.extend({
+    center: function () {
+        return this.each(function() {
+            let top = ($(window).height() - $(this).outerHeight()) / 2;
+            let left = ($(window).width() - $(this).outerWidth()) / 2;
+            $(this).css({position:'absolute', margin:0, top: (top > 0 ? top : 0)+'px', left: (left > 0 ? left : 0)+'px'});
+        });
+    },
+    centerImage: function () {
+        return this.each(function() {
+            let top = ($(window).height() - $(this).outerHeight()) / 2;
+            let left = ($(window).width() - $(this).outerWidth()) / 2;
+            $(this).css({position:'absolute', margin:0, top: (top > 0 ? top+100 : 0)+'px', left: (left > 0 ? left : 0)+'px'});
+        });
+    }
+});
+
+
+
+
+$(document).ready(function() {
+    $('#placePhoto').centerImage();
+    $('#modalBuy').center();
+
+    let mainImage = $('#image3');
+
+    $('#image1').click(function (){
+        let tmpPath = mainImage.attr('src')
+        mainImage.attr('src', $(this).attr('src'))
+        $(this).attr('src', tmpPath)
+    });
+
+    $('#image2').click(function (){
+        let tmpPath = mainImage.attr('src');
+        mainImage.attr('src', $(this).attr('src'))
+        $(this).attr('src', tmpPath)
+    });
+
+    mainImage.click(function (e){
+        if(!$('#modalBuy').hasClass('block'))
+        {
+            $('#placePhoto').removeClass('hidden')
+            $('#showImage').attr('src', $(this).attr('src'))
+            $('html, body').css({
+                overflow: 'hidden',
+                height: '100%'
+            });
+            $(document).mouseup(function (e){
+                var div = $('#showImage');
+                if (!div.is(e.target) && div.has(e.target).length === 0) {
+                    $('html, body').css({
+                        overflow: 'auto',
+                        height: 'auto'
+                    });
+                    $('#placePhoto').addClass('hidden')
+                }
             });
         }
     });
-})(jQuery);
 
-$(document).ready(function() {
-    $('#modalBuy').center();
     $('#descriptionMenu').click(function (){
         getDescription();
     });
@@ -167,5 +213,4 @@ $(document).ready(function() {
             .addClass('hidden')
     })
 });
-
 
