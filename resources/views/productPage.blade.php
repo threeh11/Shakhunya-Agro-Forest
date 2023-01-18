@@ -50,8 +50,41 @@
         </div>
 
         <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="reviewsBlock">
-            <div class="flex flex-col my-2.5">
-                <p class="my-2.5 font-['Manrope'] text-2xl font-normal leading-8 text-black">
+            <div class="flex flex-col">
+                <p class="my-1 font-['Manrope'] text-base font-bold leading-5 text-black">
+                    <! -- Имя-->
+                    Константин
+                </p>
+                <p class="mt-1 font-['Manrope'] font-normal leading-4 text-xs text-gray">
+                    <! -- Дата-->
+                    09.01.2023
+                </p>
+                <p class="mt-5 mb-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
+                    Преимущества
+                </p>
+                <p class="font-['Manrope'] font-normal leading-4 text-base text-black">
+                    <! -- Текст преимуществ-->
+                    Грамотная работа менеджеров!
+                </p>
+                <p class="mt-5 mb-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
+                    Недостатки
+                </p>
+                <p class="font-['Manrope'] font-normal leading-4 text-base text-black">
+                    <! -- Текст недостатков-->
+                    Нет недостатков
+                </p>
+                <p class="mt-5 mb-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
+                    Комментарий
+                </p>
+                <p class="font-['Manrope'] font-normal leading-4 text-base text-black">
+                    <! -- Текст комментария-->
+                    Всё на лучшем уровне! Работой компании и менеджеров доволен, всё грамотно объяснили, 
+                    заказ на деревянные поддоны пришёл в срок. Качеством и ценой деревянных поддонов доволен.
+                     Всем советую!
+                </p>
+            </div>
+            <div class="flex flex-col mt-6 border-t-2 border-t-grayUltraLight ">
+                <p class="my-6 font-['Manrope'] text-2xl font-normal leading-8 text-black">
                     Написать отзыв
                 </p>
                 <div class="my-2.5 flex flex-row">
@@ -110,17 +143,81 @@
                     Комментарий
                 </p>
                 <textarea class="p-3 pt-3 h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
-                <div class="my-2.5 w-[60%] h-11 float-left text-center rounded bg-accent">
-                    <p class="mx-2.5 my-2.5 w-[90%] text-black font-[Manrope] text-base font-normal cursor-pointer">
+                <div class="my-2.5 w-[33%] min-w-fit h-11 float-left text-center rounded bg-accent">
+                    <p class="mx-2.5 my-2.5 px-2 w-[90%] text-black font-[Manrope] text-base font-normal cursor-pointer">
                         Отправить
                     </p>
                 </div>
             </div>
         </div>
         <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="questionBlock">
+            <div class="flex flex-col">
+                <p class="my-1 font-['Manrope'] text-base font-bold leading-5 text-black">
+                    <! -- Имя-->
+                    Константин
+                </p>
+                <p class="mt-1 font-['Manrope'] font-normal leading-4 text-xs text-gray">
+                    <! -- Дата-->
+                    09.01.2023
+                </p>
+                <p class="my-6 font-['Manrope'] font-normal leading-4 text-base text-black">
+                    <! -- Текст вопроса-->
+                    Добрый день, интересует прайс на всю продукцию. Условия оптовых поставок.
+                </p>
+            </div>
             {{ $reviews }}
+            <div class="flex flex-col mt-6 border-t-2 border-t-grayUltraLight">
+                <p class="my-6 font-['Manrope'] text-2xl font-normal leading-8 text-black">
+                    Задать вопрос
+                </p>
+                <div class="flex flex-row">
+                    <input class="mr-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" placeholder="Имя" type="text">
+                    <input class="mx-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" placeholder="Телефон" type="tel">
+                    <input class="ml-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" placeholder="Электронная почта" type="email">
+                </div>
+                <textarea class="p-3 my-6 h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
+                <div class="my-2.5 w-[33%] min-w-fit h-11 float-left text-center rounded bg-accent">
+                    <p class="mx-2.5 my-2.5 px-2 w-[90%] text-black font-[Manrope] text-base font-normal cursor-pointer">
+                        Отправить
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="contactsBlock">
+            <div class="grid grid-cols-2">
+                <p class="mt-2.5 mb-1.5 bg-black my-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
+                    Телефон
+                </p>
+                {{ $contacts[0]->phone }}
+                <p class="mt-2.5 mb-1.5 font-['Manrope'] text-base font-bold leading-5 text-black">
+                    ОГРН
+                </p>
+                {{ $contacts[0]->OGRN }}
+                <p class="mt-2.5 mb-1.5 font-['Manrope'] text-base font-bold leading-5 text-black">
+                    Электронная почта
+                </p>
+                {{ $contacts[0]->email }}
+                <p class="mt-2.5 mb-1.5 font-['Manrope'] text-base font-bold leading-5 text-black">
+                    ИНН
+                </p>
+                {{ $contacts[0]->INN }}
+                <p class="mt-2.5 mb-1.5 font-['Manrope'] text-base font-bold leading-5 text-black">
+                    Наименование
+                </p>
+                {{ $contacts[0]->naming }}
+                <p class="mt-2.5 mb-1.5 font-['Manrope'] text-base font-bold leading-5 text-black">
+                    КПП
+                </p>
+                {{ $contacts[0]->KPP }}
+                <p class="my-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
+                    Юридический адрес
+                </p>
+                {{ $contacts[0]->legal_address }}
+                <p class="my-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
+                    Дата регистрации
+                </p>
+                {{ $contacts[0]->date_reg }}
+            </div>    
             {{ $contacts[0]->email }}
         </div>
     </x-content>
