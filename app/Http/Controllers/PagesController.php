@@ -39,9 +39,9 @@ class PagesController extends Controller
         $contacts = $this->getContacts->handle();
         $dataView = [
             'reviews' => $reviews,
-            'contacts' => $contacts,
-            ...$product
+            'contacts' => $contacts
         ];
+        $dataView = array_merge($product, $dataView);
         return view('productPage', $dataView);
     }
 
