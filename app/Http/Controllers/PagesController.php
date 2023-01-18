@@ -15,6 +15,7 @@ class PagesController extends Controller
 
     private GetContactsAction $getContacts;
 
+
     public function __construct(
         GetProductAction $getProduct,
         GetReviewsAction $getReviews,
