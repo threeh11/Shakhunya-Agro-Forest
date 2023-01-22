@@ -48,7 +48,7 @@
             </x-h3menu>
         </div>
 
-        @include('includes.reviews')
+{{--        @include('includes.reviews')--}}
         @include('includes.descriptions')
         <form>
             <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="questionBlock">

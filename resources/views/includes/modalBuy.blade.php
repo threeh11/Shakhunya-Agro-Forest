@@ -1,4 +1,4 @@
-<div class="bg-black bg-opacity-50 h-screen w-full hidden drop-shadow-2xl " id="modalBuy">
+<div class="bg-black bg-opacity-60 h-screen w-full hidden drop-shadow-2xl " id="modalBuy">
     <div class="w-[500px] h-[650px] @if($errors->any()) h-[750px] @endif top-[20%] left-[20%] fixed rounded-xl bg-[#FFFFFF]" id="modal">
         <div class="bg-white flex flex-col px-[19px] pt-[25px] pb-[10px]">
             <p class="text-[#333333] leading-8 text-2xl font-normal font-[Manrope] pb-3">
@@ -34,7 +34,7 @@
                     <x-validationError message="{{ $message }}"/>
                 @enderror
                 <label>
-                    <p class="border-solid text-[#333333] font-[Manrope] text-base font-bold pb-[6px]">
+                    <p class="pt-3 border-solid text-[#333333] font-[Manrope] text-base font-bold pb-[6px]">
                         Текст заказа
                     </p>
                     <textarea class="
@@ -43,7 +43,7 @@
                     border-solid
                     @if($errors->has('text')) border-[#C53737] @endif
                     resize-none" type="text" name="text">
-                        {{ old('text') }}
+                    {{ old('text') }}
                     </textarea>
                 </label>
                 @error('text')
