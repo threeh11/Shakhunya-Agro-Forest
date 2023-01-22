@@ -1,7 +1,8 @@
 @props([
     'title' => '',
     'name' => '',
-    'value' => ''
+    'value' => '',
+    'pattern' => '',
 ])
 <div {{ $attributes->class([
     'flex flex-col w-full pt-[13px]'
@@ -17,7 +18,8 @@
            @if($errors->has($name)) border-[#C53737] @endif"
            type="text"
            name="{{ $name }}"
-           value="{{ $value }}">
+           value="{{ $value }}"
+           pattern="{{ $pattern }}">
     </label>
 </div>
 

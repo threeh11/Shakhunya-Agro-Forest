@@ -77,10 +77,10 @@ function remoteOther(nameMain) {
             $('#reviewsMenu')
                 .addClass('border-[#E7E7E7]')
                 .removeClass('border-[#FFED4E]');
-            $('#contactsBlock')
+            $('#questionBlock')
                 .removeClass('block')
                 .addClass('hidden');
-            $('#contactsMenu')
+            $('#questionMenu')
                 .addClass('border-[#E7E7E7]')
                 .removeClass('border-[#FFED4E]');
         } break;
@@ -127,6 +127,7 @@ function getContacts() {
     $('#contactsBlock')
         .removeClass('hidden')
         .addClass('block');
+
     remoteOther('contacts');
 }
 
@@ -219,7 +220,8 @@ $(document).ready(function() {
             height: 'auto'
         });
     })
-    if($("#hasError").get(0)){
+    if($
+    ("#hasErrorModal").get(0)){
         $('#modalBuy')
             .removeClass('hidden')
             .addClass('block');
@@ -227,6 +229,10 @@ $(document).ready(function() {
             overflow: 'hidden',
             height: '100%'
         });
+    }
+
+    if($("#hasErrorReviews").get(0)){
+        getReviews();
     }
 });
 

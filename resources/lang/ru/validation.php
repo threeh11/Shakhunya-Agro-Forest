@@ -11,8 +11,17 @@ return [
     'alpha_dash' => 'Поле :attribute должно быть числовым',
     'attributes' => [
         'name' => 'имени',
+        'nameModal' => 'имени',
+        'nameReview' => 'имени',
         'number' => 'телефона',
+        'numberModal' => 'телефона',
+        'numberReview' => 'телефона',
         'email' => 'электронной почты',
-        'text' => 'текста заказа'
+        'emailModal' => 'электронной почты',
+        'emailReview' => 'телефона',
+        'text' => 'текста заказа',
+        'advantages' => 'приемущества',
+        'disadvantages' => 'недостатки',
+        'comment' => 'комментарий',
     ],
 ];

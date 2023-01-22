@@ -15,9 +15,9 @@ class StoreFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'alpha', 'max:20', 'min:1'],
-            'number' => ['required', 'alpha_dash', 'min:1', 'max:13'],
-            'email' => ['required', 'email:rfc,dns'],
+            'nameModal' => ['required', 'alpha', 'max:20', 'min:1'],
+            'numberModal' => ['required', 'alpha_dash', 'min:1', 'max:13'],
+            'emailModal' => ['required', 'email:rfc,dns'],
             'text' => ['required', 'string', 'max:1000', 'min:3'],
         ];
     }
