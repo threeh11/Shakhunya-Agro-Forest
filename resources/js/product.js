@@ -205,11 +205,28 @@ $(document).ready(function() {
         $('#modalBuy')
             .removeClass('hidden')
             .addClass('block');
+        $('html, body').css({
+            overflow: 'hidden',
+            height: '100%'
+        });
     })
     $('#closeModal').click(function (){
         $('#modalBuy')
             .removeClass('block')
             .addClass('hidden')
+        $('html, body').css({
+            overflow: 'auto',
+            height: 'auto'
+        });
     })
+    if($("#hasError").get(0)){
+        $('#modalBuy')
+            .removeClass('hidden')
+            .addClass('block');
+        $('html, body').css({
+            overflow: 'hidden',
+            height: '100%'
+        });
+    }
 });
 
