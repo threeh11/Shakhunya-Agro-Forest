@@ -230,6 +230,8 @@ $(document).ready(function() {
             height: '100%'
         });
     }
+    if($("#hasErrorQuestions").get(0)){
+        getQuestions();
 
     if($("#hasErrorReviews").get(0)){
         getReviews();

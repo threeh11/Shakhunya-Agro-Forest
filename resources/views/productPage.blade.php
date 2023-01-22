@@ -48,6 +48,7 @@
             </x-h3menu>
         </div>
 
+
         @include('includes.reviews')
         @include('includes.descriptions')
         <form>
@@ -61,6 +62,7 @@
                         <! -- Дата-->
                         09.01.2023
                     </p>
+
                     <p class="my-6 font-['Manrope'] font-normal leading-4 text-base text-black">
                         <! -- Текст вопроса-->
                         Добрый день, интересует прайс на всю продукцию. Условия оптовых поставок.
@@ -75,7 +77,9 @@
                         <input class="invalid:border-red mx-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Телефон" title="Введите номер телефона в формате 82345678899" pattern="[7-9]{1}[0-9]{10}" type="tel">
                         <input class="invalid:border-red ml-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Электронная почта" title="Введите адрес в формате example@site.com" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     </div>
+
                     <textarea class="p-3 my-6 h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
+
                     <button class="my-2.5 w-[33%] min-w-fit h-11 float-left text-center rounded bg-accent">
                         <p class="mx-2.5 my-2.5 px-2 w-[90%] text-black font-[Manrope] text-base font-normal cursor-pointer">
                             Отправить
@@ -85,6 +89,7 @@
             </div>
         </form>
         @include('includes.contacts')
+
     </x-content>
 
 @endsection
