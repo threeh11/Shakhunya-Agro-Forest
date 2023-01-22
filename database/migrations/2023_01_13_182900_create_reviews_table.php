@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->date('date_write');
+            $table->timestamps();
             $table->tinyInteger('rating',false, true);
             $table->string('name');
             $table->string('phone')->unique();
@@ -23,7 +24,7 @@ return new class extends Migration
             $table->mediumText('advantages')->nullable();
             $table->mediumText('disadvantages')->nullable();
             $table->mediumText('comment')->nullable();
-            $table->bigInteger('product_id')->unsigned()->index()->nullable();
+            $table->bigInteger('product_id')->unsigned()->index();
             $table->foreign('product_id')
                 ->references('id')->on('products')
                 ->onDelete('cascade');

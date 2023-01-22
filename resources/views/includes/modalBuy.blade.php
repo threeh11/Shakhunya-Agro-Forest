@@ -17,20 +17,20 @@
         </div>
         <form action="{{ route('saveBuy', $product->id) }}" class="px-[19px] pt-0 pb-[25px]" method="POST" enctype='multipart/form-data'>
             @csrf
-            @if ($errors->any())
-                <p class="hidden" id="hasError"></p>
+            @if ($errors->any() && ($errors->has('nameModal') || $errors->has('numberModal') ||  $errors->has('emailModal') ||  $errors->has('text')))
+                <p class="hidden" id="hasErrorModal"></p>
             @endif
             <div class="flex flex-col border-none">
-                <x-modalInput title="Ваше имя" name="name" value="{{ request()->old('name') }}"/>
-                @error('name')
+                <x-inputModal title="Ваше имя" name="nameModal" value="{{ request()->old('nameModal') }}" pattern="^[А-Яа-яЁё\s]+$"/>
+                @error('nameModal')
                     <x-validationError message="{{ $message }}"/>
                 @enderror
-                <x-modalInput title="Телефон" name="number" value="{{ request()->old('number') }}"/>
-                @error('number')
+                <x-inputModal title="Телефон" name="numberModal" value="{{ request()->old('numberModal') }}" pattern="[7-9]{1}[0-9]{10}"/>
+                @error('numberModal')
                     <x-validationError message="{{ $message }}"/>
                 @enderror
-                <x-modalInput title="Электронная почта" name="email" value="{{ request()->old('email') }}"/>
-                @error('email')
+                <x-inputModal title="Электронная почта" name="emailModal" value="{{ request()->old('emailModal') }}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+                @error('emailModal')
                     <x-validationError message="{{ $message }}"/>
                 @enderror
                 <label>
