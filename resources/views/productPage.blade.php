@@ -1,9 +1,7 @@
 @extends('layouts.base')
 
 @include('includes.modalBuy')
-<div class="hidden" id="placePhoto">
-    <img id="showImage" alt="photo" src="" width="700px" height="600px"/>
-</div>
+@include('includes.modalPhoto')
 
 @section('content')
     <x-content @class(['mt-10'])>
