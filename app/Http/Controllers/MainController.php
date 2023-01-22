@@ -55,7 +55,6 @@ class MainController extends Controller
 
     public function saveQuestions(int $idProduct): RedirectResponse
     {
-        dd (request()->all());
         $validData = $this->storeQuestionsFormRequest->validated();
         $isSave = $this->saveQuestions->handle($validData, $idProduct);
 

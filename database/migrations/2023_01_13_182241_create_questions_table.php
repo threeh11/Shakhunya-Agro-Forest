@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('number');
             $table->string('email');
             $table->mediumText('text_message');
-            $table->bigInteger('product_id')->unsigned()->index()->nullable();
+            $table->bigInteger('product_id')->unsigned()->index();
             $table->foreign('product_id')
                 ->references('id')->on('products')
                 ->onDelete('cascade');

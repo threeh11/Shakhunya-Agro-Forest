@@ -26,6 +26,7 @@ class SaveQuestionsAction
             'number' => $validData['numberQuestions'],
             'email' => $validData['emailQuestions'],
             'text_message' => $validData['textQuestions'],
+            'product_id' => $idProduct,
         ]);
 
         return true;

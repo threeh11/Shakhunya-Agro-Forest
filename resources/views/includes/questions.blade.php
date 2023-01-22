@@ -1,5 +1,11 @@
-<form action="{{ route('saveQuestions', $product->id) }}" method="POST" enctype='multipart/form-data'>
+<form action="{{ route('saveQuestions', $product->id) }}" method="POST" id="questionsForm"'>
     @csrf
+    @if (
+        $errors->any()
+        &&($errors->has('nameQuestions') || $errors->has('numberQuestions') || $errors->has('emailQuestions') 
+        || $errors->has('textQuestions')))
+            <p class="hidden" id="hasErrorQuestions"></p>
+    @endif
     <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="questionBlock">
         <div class="flex flex-col">
             <p class="my-1 font-['Manrope'] text-base font-bold leading-5 text-black">
@@ -25,7 +31,7 @@
                 @error('nameQuestions')
                     <x-validationError message="{{ $message }}"/>
                 @enderror
-                <x-inputQuestions placeholder="Телефон" title="Введите номер телефона в формате 82345678899" type="tel" pattern="[7-9]{1}[0-9]{10}" name='telQuestions'></x-inputQuestions>
+                <x-inputQuestions placeholder="Телефон" title="Введите номер телефона в формате 82345678899" type="tel" pattern="[7-9]{1}[0-9]{10}" name='numberQuestions'></x-inputQuestions>
                 @error('numberQuestions')
                     <x-validationError message="{{ $message }}"/>
                 @enderror

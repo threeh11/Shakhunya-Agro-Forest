@@ -228,5 +228,8 @@ $(document).ready(function() {
             height: '100%'
         });
     }
+    if($("#hasErrorQuestions").get(0)){
+        getQuestions();
+    }
 });
 
