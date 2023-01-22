@@ -25,7 +25,7 @@
                 @error('name')
                     <x-validationError message="{{ $message }}"/>
                 @enderror
-                <x-modalInput title="Телефон" name="number" value="{{ request()->old('number') }}"/>
+                <x-modalInput title="Телефон" name="number" value="{{ request()->old('number') }}" pattern="[7-9]{1}[0-9]{10}"/>
                 @error('number')
                     <x-validationError message="{{ $message }}"/>
                 @enderror
