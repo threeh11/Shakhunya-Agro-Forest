@@ -77,10 +77,10 @@ function remoteOther(nameMain) {
             $('#reviewsMenu')
                 .addClass('border-[#E7E7E7]')
                 .removeClass('border-[#FFED4E]');
-            $('#contactsBlock')
+            $('#questionBlock')
                 .removeClass('block')
                 .addClass('hidden');
-            $('#contactsMenu')
+            $('#questionMenu')
                 .addClass('border-[#E7E7E7]')
                 .removeClass('border-[#FFED4E]');
         } break;
@@ -127,6 +127,7 @@ function getContacts() {
     $('#contactsBlock')
         .removeClass('hidden')
         .addClass('block');
+
     remoteOther('contacts');
 }
 
