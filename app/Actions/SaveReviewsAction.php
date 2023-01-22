@@ -24,9 +24,9 @@ class SaveReviewsAction
         $this->reviewModel::create([
             'date_write' => now()->toDate(),
             'rating' => 5,
-            'name' => $validData['name'],
-            'phone' => $validData['number'],
-            'email' => $validData['email'],
+            'name' => $validData['nameReview'],
+            'phone' => $validData['numberReview'],
+            'email' => $validData['emailReview'],
             'advantages' => $validData['advantages'],
             'disadvantages' => $validData['disadvantages'],
             'comment' => $validData['comment'],

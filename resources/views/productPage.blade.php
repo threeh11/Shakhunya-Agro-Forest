@@ -47,10 +47,9 @@
                 Контакты
             </x-h3menu>
         </div>
-        <div class=" pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="descriptionBlock">
-            {{ $product->description }}
-        </div>
-        @include(' includes.reviews')
+
+        @include('includes.reviews')
+        @include('includes.descriptions')
         <form>
             <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="questionBlock">
                 <div class="flex flex-col">
@@ -67,7 +66,6 @@
                         Добрый день, интересует прайс на всю продукцию. Условия оптовых поставок.
                     </p>
                 </div>
-                {{ $reviews }}
                 <div class="flex flex-col mt-6 border-t-2 border-t-grayUltraLight">
                     <p class="my-6 font-['Manrope'] text-2xl font-normal leading-8 text-black">
                         Задать вопрос
@@ -86,74 +84,7 @@
                 </div>
             </div>
         </form>
-        <div class="block pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="contactsBlock">
-            <div class="grid grid-cols-2 left">
-                <div class="mr-6">
-                    <p class="mt-2.5 mb-1.5 my-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
-                        Телефон
-                    </p>
-                    <p class="mt-2.5 mb-1.5 my-2.5 font-['Manrope'] text-base font-normal leading-5 text-black">
-                        {{ $contacts[0]->phone }}
-                    </p>
-                </div>
-                <div class="ml-6">
-                    <p class="mt-2.5 mb-1.5 font-['Manrope'] text-base font-bold leading-5 text-black">
-                        ОГРН
-                    </p>
-                    <p class="mt-2.5 mb-1.5 my-2.5 font-['Manrope'] text-base font-normal leading-5 text-black">
-                        {{ $contacts[0]->OGRN }}
-                    </p>
-                </div>
-                <div class="mr-6">
-                    <p class="mt-2.5 mb-1.5 font-['Manrope'] text-base font-bold leading-5 text-black">
-                        Электронная почта
-                    </p>
-                    <p class="mt-2.5 mb-1.5 my-2.5 font-['Manrope'] text-base font-normal leading-5 text-black">
-                        {{ $contacts[0]->email }}
-                    </p>
-                </div>
-                <div class="ml-6">
-                    <p class="mt-2.5 mb-1.5 font-['Manrope'] text-base font-bold leading-5 text-black">
-                        ИНН
-                    </p>
-                    <p class="mt-2.5 mb-1.5 my-2.5 font-['Manrope'] text-base font-normal leading-5 text-black">
-                        {{ $contacts[0]->INN }}
-                    </p>
-                </div>
-                <div class="mr-6">
-                    <p class="mt-2.5 mb-1.5 font-['Manrope'] text-base font-bold leading-5 text-black">
-                        Наименование
-                    </p>
-                    <p class="mt-2.5 mb-1.5 my-2.5 font-['Manrope'] text-base font-normal leading-5 text-black">
-                        {{ $contacts[0]->naming }}
-                    </p>
-                </div>
-                <div class="ml-6">
-                    <p class="mt-2.5 mb-1.5 font-['Manrope'] text-base font-bold leading-5 text-black">
-                        КПП
-                    </p>
-                    <p class="mt-2.5 mb-1.5 my-2.5 font-['Manrope'] text-base font-normal leading-5 text-black">
-                        {{ $contacts[0]->KPP }}
-                    </p>
-                </div>
-                <div class="mr-6">
-                    <p class="my-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
-                        Юридический адрес
-                    </p>
-                    <p class="mt-2.5 mb-1.5 my-2.5 font-['Manrope'] text-base font-normal leading-5 text-black">
-                        {{ $contacts[0]->legal_address }}
-                    </p>
-                </div>
-                <div class="ml-6">
-                    <p class="my-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
-                        Дата регистрации
-                    </p>
-                    <p class="mt-2.5 mb-1.5 my-2.5 font-['Manrope'] text-base font-normal leading-5 text-black">
-                        {{ $contacts[0]->date_reg }}
-                    </p>
-                </div>
-            </div>
-        </div>
+        @include('includes.contacts')
     </x-content>
 
 @endsection

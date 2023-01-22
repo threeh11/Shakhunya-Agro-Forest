@@ -219,7 +219,8 @@ $(document).ready(function() {
             height: 'auto'
         });
     })
-    if($("#hasError").get(0)){
+    if($
+    ("#hasErrorModal").get(0)){
         $('#modalBuy')
             .removeClass('hidden')
             .addClass('block');
@@ -227,6 +228,10 @@ $(document).ready(function() {
             overflow: 'hidden',
             height: '100%'
         });
+    }
+
+    if($("#hasErrorReviews").get(0)){
+        getReviews();
     }
 });
 
