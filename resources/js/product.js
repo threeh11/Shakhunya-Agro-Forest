@@ -206,11 +206,33 @@ $(document).ready(function() {
         $('#modalBuy')
             .removeClass('hidden')
             .addClass('block');
+        $('#buttonBuy')
+            .removeClass('block')
+            .addClass('hidden')
     })
     $('#closeModal').click(function (){
         $('#modalBuy')
             .removeClass('block')
             .addClass('hidden')
+        $('#buttonBuy')
+        .removeClass('hidden')
+        .addClass('block');
     })
+    $('#openDownMenu').click(function (){
+        $('#iconNotOpenDownMenu')
+            .removeClass('hidden')
+            .addClass('block');
+        $('#iconOpenDownMenu')
+            .removeClass('block')
+            .addClass('hidden')
+    });
+    $('#openDownMenu').click(function (){
+        $('#iconNotOpenDownMenu')
+            .removeClass('hidden')
+            .addClass('block');
+        $('#iconOpenDownMenu')
+            .removeClass('block')
+            .addClass('hidden')
+    });
 });
 

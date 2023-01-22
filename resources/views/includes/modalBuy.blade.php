@@ -1,9 +1,9 @@
-<div class="hidden drop-shadow-2xl w-[500px] h-[650px] top-[20%] left-[20%] fixed rounded-xl bg-[#FFFFFF]" id="modalBuy">
+<div class="hidden drop-shadow-2xl filter-none w-[500px] h-[650px] top-[20%] left-[20%] fixed rounded-xl bg-[#FFFFFF]" id="modalBuy">
     <div class="flex flex-col px-[19px] pt-[25px] pb-[10px]">
-        <p class="text-[#333333] leading-8 text-2xl font-normal font-[Manrope] pb-3">
+        <p class="leading-8 text-2xl pb-3">
             Оптовый заказ производителю
         </p>
-        <p class="text-[#333333] font-normal font-[Manrope] leading-5">
+        <p class="leading-5">
             Пожалуйста укажите данные о вашей организации,
             интересующий объем продукции, а также другую
             информацию, которую вы посчитаете важной
