@@ -130,9 +130,9 @@
                         </div>
                     </div>
                     <div class="flex flex-row">
-                        <input class="mr-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Имя" type="text">
-                        <input class="mx-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Телефон" type="tel">
-                        <input class="ml-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Электронная почта" type="email">
+                        <input class="invalid:border-red mr-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Имя" title="Введите имя на русском языке, не используя цифр" type="text" pattern="^[А-Яа-яЁё\s]+$">
+                        <input class="invalid:border-red mx-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Телефон" title="Введите номер телефона в формате 82345678899" pattern="[7-9]{1}[0-9]{10}" type="tel">
+                        <input class="invalid:border-red ml-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Электронная почта" title="Введите адрес в формате example@site.com" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     </div>
                     <p class="mb-1 mt-3.5 font-['Manrope'] text-base font-bold leading-5 text-black">
                         Преимущества
@@ -176,9 +176,9 @@
                         Задать вопрос
                     </p>
                     <div class="flex flex-row">
-                        <input class="mr-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Имя" type="text">
-                        <input class="mx-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Телефон" type="tel">
-                        <input class="ml-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Электронная почта" type="email">
+                        <input class="invalid:border-red mr-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Имя" title="Введите имя на русском языке, не используя цифр" type="text" pattern="^[А-Яа-яЁё\s]+$">
+                        <input class="invalid:border-red mx-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Телефон" title="Введите номер телефона в формате 82345678899" pattern="[7-9]{1}[0-9]{10}" type="tel">
+                        <input class="invalid:border-red ml-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Электронная почта" title="Введите адрес в формате example@site.com" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     </div>
                     <textarea class="p-3 my-6 h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
                     <button class="my-2.5 w-[33%] min-w-fit h-11 float-left text-center rounded bg-accent">
