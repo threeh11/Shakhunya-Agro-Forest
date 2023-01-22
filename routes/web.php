@@ -9,6 +9,7 @@ Route::controller(PagesController::class)->group(function () {
     Route::get('/product/{id}', 'product')->name('product')->where('id', '[0-9]+');
 });
 
-Route::controller(MainController::class)->group(function (){
-    Route::post('/product/{id}/buy', 'saveBuy')->name('saveBuy')->where('id', '[0-9]+');
+Route::controller(MainController::class)->group(function () {
+    Route::post('/product/{id}/buy', )->name('saveBuy')->where('id', '[0-9]+');
+    Route::post('/product/{id}/saveReviews', 'saveReviews')->name('saveReviews')->where('id', '[0-9]+');
 });

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Actions\GetContactsAction;
 use App\Actions\GetProductAction;
 use App\Actions\GetReviewsAction;
-use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 class PagesController extends Controller
 {

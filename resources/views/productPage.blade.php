@@ -1,11 +1,7 @@
 @extends('layouts.base')
 
 @include('includes.modalBuy')
-<div class="bg-black bg-opacity-50 h-screen w-full hidden" id="placePhoto">
-    <div id="photo">
-        <img id="showImage" alt="photo" src="" width="700px" height="600px"/>
-    </div>
-</div>
+@include('includes.modalPhoto')
 
 @section('content')
     <x-content @class(['mt-10'])>
@@ -131,28 +127,18 @@
                         <input type="radio" name="stars" id="star-5" class="invisible bg-accent" />
                       </div>
                 </div>
-                <div class="flex flex-row">
-                    <input class="mr-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" placeholder="Имя" type="text">
-                    <input class="mx-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" placeholder="Телефон" type="tel">
-                    <input class="ml-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" placeholder="Электронная почта" type="email">
-                </div>
-                <p class="my-2.5 p-3 font-['Manrope'] text-base font-bold leading-5 text-black">
-                    Преимущества
-                </p>
-                <textarea class="p-3 h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
-                <p class="my-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
-                    Недостатки
-                </p>
-                <textarea class="p-3 pt-3 h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
-                <p class="my-2.5 font-['Manrope'] text-base font-bold leading-5 text-black">
-                    Комментарий
-                </p>
-                <textarea class="p-3 pt-3 h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
-                <div class="my-2.5 w-[33%] min-w-fit h-11 float-left text-center rounded bg-accent">
-                    <p class="mx-2.5 my-2.5 px-2 w-[90%] text-black font-[Manrope] text-base font-normal cursor-pointer">
-                        Отправить
-                    </p>
-                </div>
+                <form action="{{ route('saveReviews', $product->id) }}" method="POST" class="flex flex-col mt-6">
+                    @csrf
+                    <div class="flex flex-row">
+                        <x-inputReviews name="name" placeholder="Имя" type="text"/>
+                        <x-inputReviews name="number" placeholder="Телефон" type="tel"/>
+                        <x-inputReviews name="email" placeholder="Электронная почта" type="email"/>
+                    </div>
+                    <x-textareaReviews text="Приемущества" name="advantages"/>
+                    <x-textareaReviews text="Недостатки" name="disadvantages"/>
+                    <x-textareaReviews text="Комментарий" name="comment"/>
+                    <input class="w-[33%] mt-3 h-11 text-center rounded bg-accent w-[90%] text-black font-[Manrope] cursor-pointer text-base font-normal" type="submit" value="Отправить">
+                </form>
             </div>
         </div>
         <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="questionBlock">
@@ -170,7 +156,6 @@
                     Добрый день, интересует прайс на всю продукцию. Условия оптовых поставок.
                 </p>
             </div>
-            {{ $reviews }}
             <div class="flex flex-col mt-6 border-t-2 border-t-grayUltraLight">
                 <p class="my-6 font-['Manrope'] text-2xl font-normal leading-8 text-black">
                     Задать вопрос
