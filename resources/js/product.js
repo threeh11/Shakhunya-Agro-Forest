@@ -219,5 +219,14 @@ $(document).ready(function() {
             height: 'auto'
         });
     })
+    if($("#hasError").get(0)){
+        $('#modalBuy')
+            .removeClass('hidden')
+            .addClass('block');
+        $('html, body').css({
+            overflow: 'hidden',
+            height: '100%'
+        });
+    }
 });
 
