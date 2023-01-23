@@ -25,10 +25,10 @@
                 <h1 class="text-[#333333] font-['Manrope'] text-3xl  leading-10 font-normal pb-7">
                     {{ $product->name }}
                 </h1>
-                <p class=" text-2xl leading-10 pb-8">
+                <p class="text-[#333333] font-['Manrope'] text-2xl font-bold leading-10 font-normal pb-8">
                     {{ $product->price }}
                 </p>
-                <button class="w-[30%] bg-[#FFED4E] p-3 text-[#333333] font-['Manrope'] text-base leading-5 hover:p-3.5 hover:w-[34%] hover:drop-shadow-lg duration-300" id="buttonBuy">
+                <button class="w-[30%] bg-[#FFED4E] p-3 text-[#333333] font-['Manrope'] text-base leading-5" id="buttonBuy">
                     Купить
                 </button>
             </div>
@@ -48,7 +48,8 @@
             </x-h3menu>
         </div>
 
-{{--        @include('includes.reviews')--}}
+
+        @include('includes.reviews')
         @include('includes.descriptions')
         <form>
             <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="questionBlock">
@@ -61,22 +62,25 @@
                         <! -- Дата-->
                         09.01.2023
                     </p>
+
                     <p class="my-6 font-['Manrope'] font-normal leading-4 text-base text-black">
                         <! -- Текст вопроса-->
                         Добрый день, интересует прайс на всю продукцию. Условия оптовых поставок.
                     </p>
                 </div>
                 <div class="flex flex-col mt-6 border-t-2 border-t-grayUltraLight">
-                    <p class="my-6 font-['Manrope'] text-2xl font-normal leading-8 text-black">
+                    <p class="mb-6 mt-7 font-['Manrope'] text-2xl font-normal leading-8 text-black">
                         Задать вопрос
                     </p>
                     <div class="flex flex-row">
-                        <input class="invalid:border-red mr-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Имя" title="Введите имя на русском языке, не используя цифр" type="text" pattern="^[А-Яа-яЁё\s]+$">
-                        <input class="invalid:border-red mx-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Телефон" title="Введите номер телефона в формате 82345678899" pattern="[7-9]{1}[0-9]{10}" type="tel">
-                        <input class="invalid:border-red ml-2.5 px-3 w-[90%] h-11 border rounded border-solid border-[#CCCCCC]" required placeholder="Электронная почта" title="Введите адрес в формате example@site.com" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <input class="w-[23.75%] mr-[1.66%] my-1 px-3 h-11 text-base border rounded border-solid border-[#CCCCCC]" required placeholder="Имя" title="Введите имя на русском языке, не используя цифр" type="text" pattern="^[А-Яа-яЁё\s]+$">
+                        <input class="w-[23.75%] mr-[1.66%] my-1 px-3 h-11 text-base border rounded border-solid border-[#CCCCCC]" required placeholder="Телефон" title="Введите номер телефона в формате 82345678899" pattern="[7-9]{1}[0-9]{10}" type="tel">
+                        <input class="w-[23.75%] mr-[1.66%] my-1 px-3 h-11 text-base border rounded border-solid border-[#CCCCCC]" required placeholder="Электронная почта" title="Введите адрес в формате example@site.com" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     </div>
-                    <textarea class="p-3 my-6 h-40 border rounded border-solid border-[#CCCCCC]"></textarea>
-                    <button class="my-2.5 w-[33%] min-w-fit h-11 float-left text-center rounded bg-accent">
+
+                    <textarea class="w-[74.58%] h-32 p-3 mb-6 mt-5 resize-none border rounded border-solid border-[#CCCCCC]"></textarea>
+
+                    <button class="my-2.5 w-[23.75%] min-w-fit h-11 float-left text-center rounded bg-accent">
                         <p class="mx-2.5 my-2.5 px-2 w-[90%] text-black font-[Manrope] text-base font-normal cursor-pointer">
                             Отправить
                         </p>
@@ -85,6 +89,7 @@
             </div>
         </form>
         @include('includes.contacts')
+
     </x-content>
 
 @endsection

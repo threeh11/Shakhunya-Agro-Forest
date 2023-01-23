@@ -18,8 +18,8 @@
                 </p>
                 <x-starts/>
             </div>
-            <div class="flex flex-row w-full justify-between">
-                <div class="flex flex-col w-[33%]">
+            <div class="flex flex-row flex-wrap">
+                <div class="flex flex-col w-[23.75%] mr-[1.7%]">
                     <x-inputReviews
                         placeholder="Имя"
                         title="Введите имя на русском языке, не используя цифр"
@@ -33,7 +33,7 @@
                     <x-validationError message="{{ $message }}"/>
                     @enderror
                 </div>
-                <div class="flex flex-col w-[33%]">
+                <div class="flex flex-col w-[23.75%] mr-[1.7%]">
                     <x-inputReviews
                         placeholder="Телефон"
                         title="Введите номер телефона в формате 82345678899"
@@ -47,7 +47,7 @@
                     <x-validationError message="{{ $message }}"/>
                     @enderror
                 </div>
-                <div class="flex flex-col w-[33%]">
+                <div class="flex flex-col w-[23.75%] mr-[1.7%]">
                     <x-inputReviews
                         placeholder="Электронная почта"
                         title="Введите адрес в формате example@site.com"
@@ -77,7 +77,7 @@
 
             <button
                 id="customSaveForm"
-                class="my-2.5 w-[33%] min-w-fit bg-[#FFED4E] h-11 float-left text-center rounded text-black font-[Manrope] text-base font-normal cursor-pointer">
+                class="my-2.5 w-[23.75%] min-w-fit h-11 float-left text-center rounded bg-accent">
                 Отправить
             </button>
         </div>
