@@ -15,12 +15,9 @@ class MainController extends Controller
 {
     private StoreFormRequest $storeFormRequest;
     private StoreReviewsFormRequest $storeReviewsFormRequest;
-
     private StoreQuestionFormRequest $storeQuestionsFormRequest;
-
     private SaveBuyAction $saveBuy;
     private SaveReviewsAction $saveReviews;
-
     private SaveQuestionsAction $saveQuestions;
 
     public function __construct(
@@ -59,20 +56,19 @@ class MainController extends Controller
         return redirect()->route('product', $idProduct)
             ->with(
                 $isSave ? ['success' => 'Спасибо за ваш отзыв!'] :
-                    ['error' => 'Не удалось опубликовать ваш, попбробуйте позже']
+                    ['error' => 'Не удалось опубликовать ваш отзыв, попбробуйте позже']
             );
     }
 
     public function saveQuestions(int $idProduct): RedirectResponse
     {
-        dd (request()->all());
         $validData = $this->storeQuestionsFormRequest->validated();
         $isSave = $this->saveQuestions->handle($validData, $idProduct);
 
         return redirect()->route('product', $idProduct)
             ->with(
-                $isSave ? ['success' => 'Спасибо за ваш заказ!'] :
-                ['error' => 'Не удалось обработать ваш заказ, попбробуйте позже']
+                $isSave ? ['success' => 'Спасибо за ваш вопрос!'] :
+                ['error' => 'Не удалось опубликовать ваш вопрос, попбробуйте позже']
             );
     }
 }

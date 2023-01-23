@@ -15,7 +15,6 @@
                 Добрый день, интересует прайс на всю продукцию. Условия оптовых поставок.
             </p>
         </div>
-        {{ $reviews }}
         <div class="flex flex-col mt-6 border-t-2 border-t-grayUltraLight">
             <p class="my-6 font-['Manrope'] text-2xl font-normal leading-8 text-black">
                 Задать вопрос
@@ -25,7 +24,7 @@
                 @error('nameQuestions')
                     <x-validationError message="{{ $message }}"/>
                 @enderror
-                <x-inputQuestions placeholder="Телефон" title="Введите номер телефона в формате 82345678899" type="tel" pattern="[7-9]{1}[0-9]{10}" name='telQuestions'></x-inputQuestions>
+                <x-inputQuestions placeholder="Телефон" title="Введите номер телефона в формате 82345678899" type="tel" pattern="[7-9]{1}[0-9]{10}" name='numberQuestions'></x-inputQuestions>
                 @error('numberQuestions')
                     <x-validationError message="{{ $message }}"/>
                 @enderror
