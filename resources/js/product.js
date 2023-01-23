@@ -222,28 +222,127 @@ $(document).ready(function() {
         .removeClass('hidden')
         .addClass('block');
     })
-    $('#openDownMenu').click(function (){
-        $('#openDownMenu')
-            .addClass('hidden')
-        $('#closeDownMenu')
-            .removeClass('hidden')
-        $('#typeIconOpenDownMenu')
-            .addClass('hidden')
-        $('#parameterInput')
-            .removeClass('hidden')
-    });
-    $('#closeDownMenu').click(function (){
-        $('#closeDownMenu')
-            .addClass('hidden')
-        $('#openDownMenu')
-            .removeClass('hidden')
+    $('#typeIconNotOpenDownMenu').click(function (){
         $('#typeIconNotOpenDownMenu')
-            .removeClass('block')
+            .addClass('hidden')
         $('#typeIconOpenDownMenu')
             .removeClass('hidden')
-        $('#parameterInput')
+        $('#typeParameterInput')
+            .removeClass('hidden')
+    });
+
+    $('#typeIconOpenDownMenu').click(function (){
+        $('#typeIconOpenDownMenu')
+            .addClass('hidden')
+        $('#typeIconNotOpenDownMenu')
+            .removeClass('hidden')
+        $('#typeParameterInput')
             .addClass('hidden')
     });
+
+    $('#sizeIconNotOpenDownMenu').click(function (){
+        $('#sizeIconNotOpenDownMenu')
+            .addClass('hidden')
+        $('#sizeIconOpenDownMenu')
+            .removeClass('hidden')
+        $('#sizeParameterInput')
+            .removeClass('hidden')
+    });
+
+    $('#sizeIconOpenDownMenu').click(function (){
+        $('#sizeIconOpenDownMenu')
+            .addClass('hidden')
+        $('#sizeIconNotOpenDownMenu')
+            .removeClass('hidden')
+        $('#sizeParameterInput')
+            .addClass('hidden')
+    });
+
+    $('#priceIconNotOpenDownMenu').click(function (){
+        $('#priceIconNotOpenDownMenu')
+            .addClass('hidden')
+        $('#priceIconOpenDownMenu')
+            .removeClass('hidden')
+        $('#priceParameterInput')
+            .removeClass('hidden')
+    });
+
+    $('#priceIconOpenDownMenu').click(function (){
+        $('#priceIconOpenDownMenu')
+            .addClass('hidden')
+        $('#priceIconNotOpenDownMenu')
+            .removeClass('hidden')
+        $('#priceParameterInput')
+            .addClass('hidden')
+    });
+
+    $('#CheckBoxOff1').click(function (){
+        $('#CheckBoxOff1')
+            .addClass('hidden')
+        $('#CheckBoxOn1')
+            .removeClass('hidden')
+    });
+
+    $('#CheckBoxOn1').click(function (){
+        $('#CheckBoxOn1')
+            .addClass('hidden')
+        $('#CheckBoxOff1')
+            .removeClass('hidden')
+    });
+    $('#CheckBoxOff2').click(function (){
+        $('#CheckBoxOff2')
+            .addClass('hidden')
+        $('#CheckBoxOn2')
+            .removeClass('hidden')
+    });
+
+    $('#CheckBoxOn2').click(function (){
+        $('#CheckBoxOn2')
+            .addClass('hidden')
+        $('#CheckBoxOff2')
+            .removeClass('hidden')
+    });
+    $('#CheckBoxOff3').click(function (){
+        $('#CheckBoxOff3')
+            .addClass('hidden')
+        $('#CheckBoxOn3')
+            .removeClass('hidden')
+    });
+
+    $('#CheckBoxOn3').click(function (){
+        $('#CheckBoxOn3')
+            .addClass('hidden')
+        $('#CheckBoxOff3')
+            .removeClass('hidden')
+    });
+    $('#CheckBoxOff4').click(function (){
+        $('#CheckBoxOff4')
+            .addClass('hidden')
+        $('#CheckBoxOn4')
+            .removeClass('hidden')
+    });
+
+    $('#CheckBoxOn4').click(function (){
+        $('#CheckBoxOn4')
+            .addClass('hidden')
+        $('#CheckBoxOff4')
+            .removeClass('hidden')
+    });
+    $('#CheckBoxOff5').click(function (){
+        $('#CheckBoxOff5')
+            .addClass('hidden')
+        $('#CheckBoxOn5')
+            .removeClass('hidden')
+    });
+
+    $('#CheckBoxOn5').click(function (){
+        $('#CheckBoxOn5')
+            .addClass('hidden')
+        $('#CheckBoxOff5')
+            .removeClass('hidden')
+    });
+
+
         $('html, body').css({
             overflow: 'auto',
             height: 'auto'
@@ -259,6 +358,8 @@ $(document).ready(function() {
         });
     }
 
-    if($("#hasErrorReviews").get(0)) getReviews();
+    if($("#hasErrorReviews").get(0)){
+        getReviews();
+    }
 });
 
