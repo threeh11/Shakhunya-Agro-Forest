@@ -4,3 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base 
+{
+    p 
+    {
+        @apply text-[#333333] ;
+        @apply font-normal ;
+        @apply font-[Manrope];
+    }
+
+    div
+    {
+        @apply text-[#333333] ;
+        @apply font-normal ;
+        @apply font-[Manrope]; 
+    }
+
+    a 
+    {
+        @apply text-[#333333] ;
+        @apply font-normal ;
+        @apply font-[Manrope];
+    }
+
+}    

@@ -25,10 +25,10 @@
                 <h1 class="text-[#333333] font-['Manrope'] text-3xl  leading-10 font-normal pb-7">
                     {{ $product->name }}
                 </h1>
-                <p class="text-[#333333] font-['Manrope'] text-2xl font-bold leading-10 font-normal pb-8">
+                <p class=" text-2xl leading-10 pb-8">
                     {{ $product->price }}
                 </p>
-                <button class="w-[30%] bg-[#FFED4E] p-3 text-[#333333] font-['Manrope'] text-base leading-5" id="buttonBuy">
+                <button class="w-[30%] bg-[#FFED4E] p-3 text-[#333333] font-['Manrope'] text-base leading-5 hover:p-3.5 hover:w-[34%] hover:drop-shadow-lg duration-300" id="buttonBuy">
                     Купить
                 </button>
             </div>

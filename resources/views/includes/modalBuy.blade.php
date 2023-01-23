@@ -33,6 +33,7 @@
                 @error('emailModal')
                     <x-validationError message="{{ $message }}"/>
                 @enderror
+
                 <label>
                     <p class="pt-3 border-solid text-[#333333] font-[Manrope] text-base font-bold pb-[6px]">
                         Текст заказа

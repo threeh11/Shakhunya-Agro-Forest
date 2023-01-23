@@ -206,6 +206,9 @@ $(document).ready(function() {
         $('#modalBuy')
             .removeClass('hidden')
             .addClass('block');
+        $('#buttonBuy')
+            .removeClass('block')
+            .addClass('hidden')
         $('html, body').css({
             overflow: 'hidden',
             height: '100%'
@@ -215,6 +218,32 @@ $(document).ready(function() {
         $('#modalBuy')
             .removeClass('block')
             .addClass('hidden')
+        $('#buttonBuy')
+        .removeClass('hidden')
+        .addClass('block');
+    })
+    $('#openDownMenu').click(function (){
+        $('#openDownMenu')
+            .addClass('hidden')
+        $('#closeDownMenu')
+            .removeClass('hidden')
+        $('#typeIconOpenDownMenu')
+            .addClass('hidden')
+        $('#parameterInput')
+            .removeClass('hidden')
+    });
+    $('#closeDownMenu').click(function (){
+        $('#closeDownMenu')
+            .addClass('hidden')
+        $('#openDownMenu')
+            .removeClass('hidden')
+        $('#typeIconNotOpenDownMenu')
+            .removeClass('block')
+        $('#typeIconOpenDownMenu')
+            .removeClass('hidden')
+        $('#parameterInput')
+            .addClass('hidden')
+    });
         $('html, body').css({
             overflow: 'auto',
             height: 'auto'
