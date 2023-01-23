@@ -220,8 +220,8 @@ $(document).ready(function() {
             height: 'auto'
         });
     })
-    if($
-    ("#hasErrorModal").get(0)){
+
+    if($("#hasErrorModal").get(0)){
         $('#modalBuy')
             .removeClass('hidden')
             .addClass('block');

@@ -9,5 +9,9 @@
         <a href="{{ route('product', $product->id) }}">
             {{ $product->name }}
         </a>
+    @else
+        <a href="{{ route('index') }}">
+            Каталог
+        </a>
     @endif
 </div>
