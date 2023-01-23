@@ -33,6 +33,8 @@
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+
 @vite('resources/js/product.js')
 @vite('resources/js/saveReviews.js')
 </html>

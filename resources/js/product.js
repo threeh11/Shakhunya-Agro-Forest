@@ -131,6 +131,13 @@ function getContacts() {
     remoteOther('contacts');
 }
 
+function start() {
+    $('#showImage').centerImage();
+    $('#placePhoto').center();
+    $('#modalBuy').center();
+    $('#modal').center();
+}
+
 $.fn.extend({
     center: function () {
         return this.each(function() {
@@ -148,11 +155,51 @@ $.fn.extend({
     }
 });
 
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+function setCookie(name, value, options = {}) {
+
+    options = {
+        path: '/',
+        ...options
+    };
+
+    if (options.expires instanceof Date) {
+        options.expires = options.expires.toUTCString();
+    }
+
+    let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+    for (let optionKey in options) {
+        updatedCookie += "; " + optionKey;
+        let optionValue = options[optionKey];
+        if (optionValue !== true) {
+            updatedCookie += "=" + optionValue;
+        }
+    }
+
+    document.cookie = updatedCookie;
+}
+
+function deleteCookie(name) {
+    setCookie(name, "", {
+        'max-age': -1
+    })
+}
+
 $(document).ready(function() {
-    $('#showImage').centerImage();
-    $('#placePhoto').center();
-    $('#modalBuy').center();
-    $('#modal').center();
+    start();
+
+    $('#addFavorites').click(function () {
+        let cokies = getCookie('productsId') === undefined ? '' : getCookie('productsId');
+        const productId = $('#productId').text();
+        cokies += !cokies.includes(String(productId)) ? ' ' + String(productId) : '';
+        setCookie('productsId', cokies, {samesite: 'strict'});
+        $('#svgFavorites').addClass('fill-[#FFED4E]').addClass('stroke-[#FFED4E]')
+    });
 
     let mainImage = $('#image3');
 
@@ -178,7 +225,7 @@ $(document).ready(function() {
                 height: '100%'
             });
             $(document).mouseup(function (e){
-                var div = $('#showImage');
+                let div = $('#showImage');
                 if (!div.is(e.target) && div.has(e.target).length === 0) {
                     $('html, body').css({
                         overflow: 'auto',
