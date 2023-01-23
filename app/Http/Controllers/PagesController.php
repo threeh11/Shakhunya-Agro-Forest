@@ -61,9 +61,7 @@ class PagesController extends Controller
             $products[$product - 1] = $this->productModel->find((int) $item);
         }
 
-        dd($products);
-
-        return view('favorites', $products);
+        return view('favorites', compact('products'));
     }
 
 }

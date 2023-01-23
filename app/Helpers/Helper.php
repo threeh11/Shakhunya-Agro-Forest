@@ -15,9 +15,14 @@ class Helper
 
     public static function isFavorites($idProduct): bool
     {
-        if ($_COOKIE['productsId'] !== '')
-        {
-            return str_contains($_COOKIE['productsId'], (string) $idProduct);
+        if (array_key_exists('productsId', $_COOKIE)) {
+            if (count($_COOKIE) !== 0) {
+                if ($_COOKIE['productsId'] !== '') {
+                    return str_contains($_COOKIE['productsId'], (string)$idProduct);
+                }
+                return false;
+            }
+            return false;
         }
         return false;
     }

@@ -201,6 +201,13 @@ $(document).ready(function() {
         $('#svgFavorites').addClass('fill-[#FFED4E]').addClass('stroke-[#FFED4E]')
     });
 
+    $('#removeFavorites').click(function () {
+        alert($(this).attr('name'));
+        let cokies = getCookie('productsId') === undefined ? '' : getCookie('productsId');
+        const productId = $('#productId').text();
+        deleteCookie('productsId');
+    });
+
     let mainImage = $('#image3');
 
     $('#image1').click(function (){
