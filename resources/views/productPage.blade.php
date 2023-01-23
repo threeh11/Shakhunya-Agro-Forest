@@ -6,7 +6,6 @@
 @section('content')
     <x-content @class(['mt-10'])>
         <x-breadcrumb :product=$product />
-        <p class="hidden" id="productId">{{ $product->id }}</p>
         <div class="flex flex-row w-full h-[592px]">
             <div class="flex flex-row gap-2 shrink-0">
                 @foreach($listImages as $image)
@@ -21,7 +20,7 @@
                     @endif
                 @endforeach
             </div>
-            
+
             <div class="flex flex-row justify-between">
                 <div class="flex flex-col pl-10 w-[87%]">
                     <h1 class="text-[#333333] font-['Manrope'] text-3xl  leading-10 font-normal pb-7">
