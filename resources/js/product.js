@@ -219,19 +219,25 @@ $(document).ready(function() {
         .addClass('block');
     })
     $('#openDownMenu').click(function (){
-        $('#iconNotOpenDownMenu')
-            .removeClass('hidden')
-            .addClass('block');
-        $('#iconOpenDownMenu')
-            .removeClass('block')
+        $('#openDownMenu')
             .addClass('hidden')
-    });
-    $('#openDownMenu').click(function (){
-        $('#iconNotOpenDownMenu')
+        $('#closeDownMenu')
             .removeClass('hidden')
-            .addClass('block');
-        $('#iconOpenDownMenu')
+        $('#typeIconOpenDownMenu')
+            .addClass('hidden')
+        $('#parameterInput')
+            .removeClass('hidden')
+    });
+    $('#closeDownMenu').click(function (){
+        $('#closeDownMenu')
+            .addClass('hidden')
+        $('#openDownMenu')
+            .removeClass('hidden')
+        $('#typeIconNotOpenDownMenu')
             .removeClass('block')
+        $('#typeIconOpenDownMenu')
+            .removeClass('hidden')
+        $('#parameterInput')
             .addClass('hidden')
     });
 });
