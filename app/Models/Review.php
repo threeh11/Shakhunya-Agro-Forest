@@ -18,6 +18,8 @@ class Review extends Model
         'advantages',
         'disadvantages',
         'comment',
+        'name',
+        'product_id'
     ];
 
     public function product(): BelongsTo

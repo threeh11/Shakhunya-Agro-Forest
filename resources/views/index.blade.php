@@ -95,4 +95,13 @@
         </div>
     </div>
 </main>
+
+
+                @foreach($products as $product)
+                    <x-product
+                        id="{{ $product->id }}"
+                        city="{{ $product->city }}"
+                        rating="{{ $product->rating }}"
+                        name="{{ $product->name }}"
+                        price="{{ $product->price }}"/>
 @endsection

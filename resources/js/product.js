@@ -77,10 +77,10 @@ function remoteOther(nameMain) {
             $('#reviewsMenu')
                 .addClass('border-[#E7E7E7]')
                 .removeClass('border-[#FFED4E]');
-            $('#contactsBlock')
+            $('#questionBlock')
                 .removeClass('block')
                 .addClass('hidden');
-            $('#contactsMenu')
+            $('#questionMenu')
                 .addClass('border-[#E7E7E7]')
                 .removeClass('border-[#FFED4E]');
         } break;
@@ -127,6 +127,7 @@ function getContacts() {
     $('#contactsBlock')
         .removeClass('hidden')
         .addClass('block');
+
     remoteOther('contacts');
 }
 
@@ -142,17 +143,16 @@ $.fn.extend({
         return this.each(function() {
             let top = ($(window).height() - $(this).outerHeight()) / 2;
             let left = ($(window).width() - $(this).outerWidth()) / 2;
-            $(this).css({position:'absolute', margin:0, top: (top > 0 ? top+100 : 0)+'px', left: (left > 0 ? left : 0)+'px'});
+            $(this).css({position:'absolute', margin:0, top: (top > 0 ? top-250  : 0)+'px', left: (left > 0 ? left : 0)+'px'});
         });
     }
 });
 
-
-
-
 $(document).ready(function() {
-    $('#placePhoto').centerImage();
+    $('#showImage').centerImage();
+    $('#placePhoto').center();
     $('#modalBuy').center();
+    $('#modal').center();
 
     let mainImage = $('#image3');
 
@@ -209,6 +209,10 @@ $(document).ready(function() {
         $('#buttonBuy')
             .removeClass('block')
             .addClass('hidden')
+        $('html, body').css({
+            overflow: 'hidden',
+            height: '100%'
+        });
     })
     $('#closeModal').click(function (){
         $('#modalBuy')
@@ -240,5 +244,24 @@ $(document).ready(function() {
         $('#parameterInput')
             .addClass('hidden')
     });
+        $('html, body').css({
+            overflow: 'auto',
+            height: 'auto'
+        });
+    })
+
+    if($("#hasErrorModal").get(0)){
+        $('#modalBuy')
+            .removeClass('hidden')
+            .addClass('block');
+        $('html, body').css({
+            overflow: 'hidden',
+            height: '100%'
+        });
+    }
+
+    if($("#hasErrorReviews").get(0)){
+        getReviews();
+    }
 });
 

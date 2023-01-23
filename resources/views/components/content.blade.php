@@ -1,5 +1,5 @@
 <div {{ $attributes->class([
-    "w-[80%] m-auto"
+    "w-[62.7083333%] m-auto"
 ]) }}>
     {{ $slot }}
 </div>

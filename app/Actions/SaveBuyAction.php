@@ -22,9 +22,9 @@ class SaveBuyAction
         }
 
         $this->orderModel::create([
-            'name' => $validData['name'],
-            'number' => $validData['number'],
-            'email' => $validData['email'],
+            'name' => $validData['nameModal'],
+            'number' => $validData['numberModal'],
+            'email' => $validData['emailModal'],
             'text_order' => $validData['text'],
             'product_id' => $idProduct,
         ]);
