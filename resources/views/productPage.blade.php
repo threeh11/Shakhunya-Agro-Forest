@@ -8,7 +8,7 @@
         <x-breadcrumb :product=$product />
         <p class="hidden" id="productId">{{ $product->id }}</p>
         <div class="flex flex-row w-full h-[592px]">
-            <div class="flex flex-row gap-2">
+            <div class="flex flex-row gap-2 shrink-0">
                 @foreach($listImages as $image)
                     @if (1  === $loop->iteration)
                         <div class="flex flex-col gap-2">
@@ -28,7 +28,7 @@
                 <p class=" text-2xl leading-10 pb-8">
                     {{ $product->price }}
                 </p>
-                <button class="w-[30%] bg-[#FFED4E] p-3 text-[#333333] font-['Manrope'] text-base leading-5 hover:p-3.5 hover:w-[34%] hover:drop-shadow-lg duration-300" id="buttonBuy">
+                <button class="w-[43%] bg-[#FFED4E] p-3 text-[#333333] font-['Manrope'] text-base leading-5 hover:p-3.5 hover:w-[45%] hover:drop-shadow-lg duration-300" id="buttonBuy">
                     Купить
                 </button>
             </div>
