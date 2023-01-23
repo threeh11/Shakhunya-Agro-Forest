@@ -248,7 +248,6 @@ $(document).ready(function() {
             overflow: 'auto',
             height: 'auto'
         });
-    })
 
     if($("#hasErrorModal").get(0)){
         $('#modalBuy')
@@ -260,8 +259,6 @@ $(document).ready(function() {
         });
     }
 
-    if($("#hasErrorReviews").get(0)){
-        getReviews();
-    }
+    if($("#hasErrorReviews").get(0)) getReviews();
 });
 
