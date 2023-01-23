@@ -1,5 +1,5 @@
-<div class="hidden py-10 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="contactsBlock">
-    <div class="grid grid-cols-2 left">
+<div class="hidden text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="contactsBlock">
+    <div class="grid grid-cols-2 gap-x-16">
         <x-elemContacts name="Телефон" value="{{ $contacts[0]->phone }}"/>
         <x-elemContacts name="ОГРН" value="{{ $contacts[0]->OGRN }}"/>
         <x-elemContacts name="Электронная почта" value="{{ $contacts[0]->email }}"/>

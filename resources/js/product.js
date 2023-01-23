@@ -330,26 +330,70 @@ $(document).ready(function() {
             .addClass('hidden')
     });
 
-    $('#CheckBoxOff').click(function (){
-        $('#CheckBoxOff')
+    $('#CheckBoxOff1').click(function (){
+        $('#CheckBoxOff1')
             .addClass('hidden')
-        $('#CheckBoxOn')
-            .removeClass('hidden')
-        $('#CheckBox')
-            .addClass('bg-[#FFED4E]')
-        $('#confirmationTick')
+        $('#CheckBoxOn1')
             .removeClass('hidden')
     });
 
-    $('#CheckBoxOn').click(function (){
-        $('#CheckBoxOn')
+    $('#CheckBoxOn1').click(function (){
+        $('#CheckBoxOn1')
             .addClass('hidden')
-        $('#CheckBoxOff')
+        $('#CheckBoxOff1')
             .removeClass('hidden')
-        $('#CheckBox')
-            .removeClass('bg-[#FFED4E]')
-        $('#confirmationTick')
+    });
+    $('#CheckBoxOff2').click(function (){
+        $('#CheckBoxOff2')
             .addClass('hidden')
+        $('#CheckBoxOn2')
+            .removeClass('hidden')
+    });
+
+    $('#CheckBoxOn2').click(function (){
+        $('#CheckBoxOn2')
+            .addClass('hidden')
+        $('#CheckBoxOff2')
+            .removeClass('hidden')
+    });
+    $('#CheckBoxOff3').click(function (){
+        $('#CheckBoxOff3')
+            .addClass('hidden')
+        $('#CheckBoxOn3')
+            .removeClass('hidden')
+    });
+
+    $('#CheckBoxOn3').click(function (){
+        $('#CheckBoxOn3')
+            .addClass('hidden')
+        $('#CheckBoxOff3')
+            .removeClass('hidden')
+    });
+    $('#CheckBoxOff4').click(function (){
+        $('#CheckBoxOff4')
+            .addClass('hidden')
+        $('#CheckBoxOn4')
+            .removeClass('hidden')
+    });
+
+    $('#CheckBoxOn4').click(function (){
+        $('#CheckBoxOn4')
+            .addClass('hidden')
+        $('#CheckBoxOff4')
+            .removeClass('hidden')
+    });
+    $('#CheckBoxOff5').click(function (){
+        $('#CheckBoxOff5')
+            .addClass('hidden')
+        $('#CheckBoxOn5')
+            .removeClass('hidden')
+    });
+
+    $('#CheckBoxOn5').click(function (){
+        $('#CheckBoxOn5')
+            .addClass('hidden')
+        $('#CheckBoxOff5')
+            .removeClass('hidden')
     });
 
 
