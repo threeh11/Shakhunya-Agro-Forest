@@ -190,23 +190,63 @@ function deleteCookie(name) {
     })
 }
 
+function getIdFavorites(count) {
+    let idArray = [];
+    for (let i = 0; i < count; i++)
+    {
+        idArray[i] = 'removeFavorites_' + (i+1);
+    }
+    return idArray;
+}
+
+function getAddIdFavorites(count) {
+    let idArray = [];
+    for (let i = 0; i < count; i++)
+    {
+        idArray[i] = 'addFavorites_' + (i+1);
+    }
+    return idArray;
+}
+
 $(document).ready(function() {
     start();
 
-    $('#addFavorites').click(function () {
+    $('#addFavoritesProduct').click(function () {
         let cokies = getCookie('productsId') === undefined ? '' : getCookie('productsId');
         const productId = $('#productId').text();
         cokies += !cokies.includes(String(productId)) ? ' ' + String(productId) : '';
         setCookie('productsId', cokies, {samesite: 'strict'});
-        $('#svgFavorites').addClass('fill-[#FFED4E]').addClass('stroke-[#FFED4E]')
+        $('#svgFavorites').addClass('fill-[#FFED4E]').addClass('stroke-[#FFED4E]');
     });
 
-    $('#removeFavorites').click(function () {
-        alert($(this).attr('name'));
-        let cokies = getCookie('productsId') === undefined ? '' : getCookie('productsId');
-        const productId = $('#productId').text();
-        deleteCookie('productsId');
-    });
+    if (window.location.pathname === '/favorites') {
+        let countFavorites = Number($('#productsCount').text());
+        let idFavorites = getIdFavorites(countFavorites);
+        for (let i = 0; i < countFavorites; i++) {
+            $('#' + idFavorites[i]).click(function() {
+                let cokies = getCookie('productsId') === undefined ? '' : getCookie('productsId');
+                deleteCookie('productsId');
+                cokies = cokies.replace('  ', '').replace(String($(this).attr('name')), '');
+                setCookie('productsId', cokies, {samesite: 'strict'});
+                location.reload();
+            });
+        }
+    }
+    if (window.location.pathname === '/') {
+        let countFavorites = Number($('#productsCount').text());
+        console.log(countFavorites);
+        let idFavorites = getAddIdFavorites(countFavorites);
+        console.log(idFavorites);
+        for (let i = 0; i < countFavorites; i++) {
+            $('#' + idFavorites[i]).click(function() {
+                let cokies = getCookie('productsId') === undefined ? '' : getCookie('productsId');
+                const productId = String($(this).attr('name'));
+                cokies += !cokies.includes(String(productId)) ? ' ' + String(productId) : '';
+                setCookie('productsId', cokies, {samesite: 'strict'});
+                $(this).children('path').addClass('fill-[#FFED4E]').addClass('stroke-[#FFED4E]');
+            });
+        }
+    }
 
     let mainImage = $('#image3');
 
