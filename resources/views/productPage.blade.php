@@ -26,7 +26,7 @@
                     <h1 class="text-[#333333] font-['Manrope'] text-3xl  leading-10 font-normal pb-7">
                         {{ $product->name }}
                     </h1>
-                    <p class=" text-2xl leading-10 pb-8">
+                    <p class="pb-8 text-2xl leading-10 ">
                         {{ $product->price }}
                     </p>
                     <button class="w-[43%] bg-[#FFED4E] p-3 text-[#333333] font-['Manrope'] text-base leading-5 hover:p-3.5 hover:w-[45%] hover:drop-shadow-lg duration-300" id="buttonBuy">
@@ -44,10 +44,20 @@
                 Описание
             </x-h3menu>
             <x-h3menu id="reviewsMenu">
-                Отзывы
+                <nobr>
+                    Отзывы
+                    <sup class="text-[#707070] font-['Manrope'] font-normal text-sm">
+                        1
+                    </sup>
+                </nobr>
             </x-h3menu>
             <x-h3menu id="questionMenu">
-                Вопросы
+                <nobr>
+                    Вопросы
+                    <sup class="text-[#707070] font-['Manrope'] font-normal text-sm">
+                        1
+                    </sup>
+                </nobr>
             </x-h3menu>
             <x-h3menu id="contactsMenu">
                 Контакты
