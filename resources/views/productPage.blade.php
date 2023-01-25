@@ -7,21 +7,21 @@
     <x-content @class(['mt-10'])>
         <x-breadcrumb :product=$product />
         <p class="hidden" id="productId">{{ $product->id }}</p>
-        <div class="flex flex-row w-full h-[592px]">
-            <div class="flex flex-row gap-2 shrink-0">
+        <div class="flex flex-row w-full h-[592px] lg:flex-col lg:mb-[200px]">
+            <div class="flex flex-row gap-2 shrink-0 lg:justify-center">
                 @foreach($listImages as $image)
                     @if (1  === $loop->iteration)
                         <div class="flex flex-col gap-2">
-                            <img class="w-[110px] h-[110px]" src="{{ asset($image) }}" alt="{{ $product->name }}" id="{{ 'image' . $loop->iteration }}">
+                            <img class="w-[110px] h-[110px] lg:hidden" src="{{ asset($image) }}" alt="{{ $product->name }}" id="{{ 'image' . $loop->iteration }}">
                     @elseif (2 === $loop->iteration)
-                            <img class="w-[110px] h-[110px]" src="{{ asset($image) }}" alt="{{ $product->name }}" id="{{ 'image' . $loop->iteration }}">
+                            <img class="w-[110px] h-[110px] lg:hidden" src="{{ asset($image) }}" alt="{{ $product->name }}" id="{{ 'image' . $loop->iteration }}">
                         </div>
                     @elseif (3 === $loop->iteration)
-                        <img class="w-[472px] h-[454px]" src="{{ asset($image) }}" alt="{{ $product->name }}" id="{{ 'image' . $loop->iteration }}">
+                        <img class="w-[472px] h-[454px] sm:w-[236px] sm:h-[227px]" src="{{ asset($image) }}" alt="{{ $product->name }}" id="{{ 'image' . $loop->iteration }}">
                     @endif
                 @endforeach
             </div>
-            <div class="flex flex-col pl-10">
+            <div class="flex flex-col pl-10 lg:pl-0">
                 <h1 class="text-[#333333] font-['Manrope'] text-3xl  leading-10 font-normal pb-7">
                     {{ $product->name }}
                 </h1>

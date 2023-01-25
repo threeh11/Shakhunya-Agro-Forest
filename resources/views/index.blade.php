@@ -2,8 +2,8 @@
 
 @section('content')
 <main class="grow">
-    <div class="flex flex-row relative mx-[18%] lg:flex-col lg:flex-wrap lg:mx-auto">
-        <div class="min-w-[286px] flex flex-col top-[20px] mt-[30px] mr-[21px]">
+    <div class="flex flex-row relative mx-[18%] lg:flex-col lg:flex-wrap lg:justify-center lg:mx-0 lg:items-center" >
+        <div class="min-w-[286px] flex flex-col top-[20px] mt-[30px] mr-[21px] sm:justify-center lg:mt-0 lg:mr-0">
             <div>
                 <div class="not-italic text-[14px] text-gray"><a href="#" class="not-italic text-[14px] text-gray">Каталог</a>/ Пиломатериалы</div>
                 <p class="not-italic text-[32px]">Пиломатериалы</p>
@@ -96,13 +96,13 @@
                 </form>
             </div>
         </div>
-        <div class="flex flex-col min-w-[286px] mt-[163px] lg:justify-center ">
+        <div class="flex flex-col min-w-[286px] mt-[163px] lg:items-center lg:mt-[20px]">
             <select class="select select-bordered w-full max-w-[286px] border rounded-[5px] px-[16px] py-[12px] mb-[20px] font-[Manrope] font-normal not-italic text-[16px] text-black">
                 <option disabled selected>сортировать</option>
                 <option class="font-[Manrope] font-normal not-italic text-[16px] text-black">по убыванию цены</option>
                 <option class="font-[Manrope] font-normal not-italic text-[16px] text-black">по возрастанию цены</option>
             </select>
-            <div class="flex flex-wrap flex-row shrink-[0] gap-[20px] sm:flex-col sm:align-middle sm:justify-center">
+            <div class="flex flex-wrap flex-row shrink-[0] gap-[20px] lg:justify-center sm:flex-col sm:items-center">
                 @foreach($products as $product)
                         <x-product
                             id="{{ $product->id }}"
