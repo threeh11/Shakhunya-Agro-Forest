@@ -3,13 +3,13 @@
 namespace App\Actions;
 
 use Illuminate\Support\Facades\DB;
-use Illuminate\Contracts\Pagination\Paginator;
+use Illuminate\Support\Collection;
 
 class GetReviewsAction
 {
 
-    public function handle(int $idProduct): Paginator
+    public function handle(int $idProduct): Collection
     {
-        return DB::table('reviews')->where('product_id', $idProduct)->paginate(3);
+        return DB::table('reviews')->where('product_id', $idProduct)->get();
     }
 }
