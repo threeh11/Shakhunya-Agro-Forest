@@ -48,7 +48,7 @@
                 <nobr>
                     Отзывы
                     <sup class="text-[#707070] font-['Manrope'] font-normal text-sm">
-                        1
+                        {{ count($reviews) }}
                     </sup>
                 </nobr>
             </x-h3menu>
@@ -56,7 +56,7 @@
                 <nobr>
                     Вопросы
                     <sup class="text-[#707070] font-['Manrope'] font-normal text-sm">
-                        1
+                        {{ count($questions) }}
                     </sup>
                 </nobr>
             </x-h3menu>

@@ -26,7 +26,7 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Кругляк',
-            'description' => 'Иммеются: сосна, ель, береза, осина',
+            'description' => 'Кругляк: сосна, ель, береза, осина',
             'path_to_images' =>
                 'storage/Пиломатериал_хвойных_лиственых_пород_1.png' . ' ' .
                 'storage/Пиломатериал_хвойных_лиственых_пород_2.jpg' . ' ' .
@@ -35,7 +35,7 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Поддоны',
-            'description' => 'Иммеются: 800×1200, 1000×1200, 1140×1140, любой влажности!',
+            'description' => 'Поддоны: 800×1200, 1000×1200, 1140×1140, любой влажности!',
             'path_to_images' =>
                 'storage/Пиломатериал_хвойных_лиственых_пород_1.png' . ' ' .
                 'storage/Пиломатериал_хвойных_лиственых_пород_2.jpg' . ' ' .
@@ -53,7 +53,7 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Черенки',
-            'description' => 'Иммеются: береза-осина.',
+            'description' => 'Черенки: береза-осина.',
             'path_to_images' =>
                 'storage/Пиломатериал_хвойных_лиственых_пород_1.jpg' . ' ' .
                 'storage/Пиломатериал_хвойных_лиственых_пород_2.jpg' . ' ' .

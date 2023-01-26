@@ -9,7 +9,6 @@ use App\Http\Requests\StoreFormRequest;
 use App\Http\Requests\StoreQuestionFormRequest;
 use App\Http\Requests\StoreReviewsFormRequest;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
@@ -26,7 +25,7 @@ class MainController extends Controller
         SaveBuyAction $saveBuy,
         SaveQuestionsAction $saveQuestions,
         StoreReviewsFormRequest $storeReviewsFormRequest,
-        SaveReviewsAction $saveReviews
+        SaveReviewsAction $saveReviews,
     ) {
         $this->storeFormRequest = $storeFormRequest;
         $this->storeQuestionsFormRequest = $storeQuestionFormRequest;
@@ -71,4 +70,5 @@ class MainController extends Controller
                 ['error' => 'Не удалось опубликовать ваш вопрос, попбробуйте позже']
             );
     }
+
 }
