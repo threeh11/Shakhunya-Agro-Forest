@@ -15,6 +15,7 @@ class Question extends Model
         'number',
         'email',
         'text_message',
+        'product_id',
     ];
 
     public function product(): BelongsTo
