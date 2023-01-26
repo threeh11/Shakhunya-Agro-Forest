@@ -19,7 +19,7 @@ class ReviewFactory extends Factory
     {
         return [
             'date_write' => now(),
-            'rating' => random_int(0,5),
+            'rating' => random_int(1,5),
             'phone' => fake()->phoneNumber(),
             'email' => fake()->email(),
             'advantages' => fake()->text(),

@@ -2,22 +2,14 @@
 
 namespace App\Actions;
 
-use App\Models\Product;
-use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Contracts\Pagination\Paginator;
 
 class GetReviewsAction
 {
-    private Product $productModel;
 
-    public function __construct(
-        Product $productModel,
-    )
+    public function handle(int $idProduct): Paginator
     {
-        $this->productModel = $productModel;
-    }
-
-    public function handle(int $idProduct): Collection
-    {
-        return $this->productModel::find($idProduct)->reviews;
+        return DB::table('reviews')->where('product_id', $idProduct)->paginate(3);
     }
 }

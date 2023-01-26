@@ -7,8 +7,7 @@
         <p class="hidden" id="hasErrorReviews"></p>
     @endif
     <div class="hidden pt-5 text-[#333333] font-['Manrope'] text-base leading-6 font-normal" id="reviewsBlock">
-        <x-comment :reviews=$reviews/>
-        <div class="flex flex-col mt-6 border-t-2 border-t-grayUltraLight ">
+        <div class="flex flex-col ">
             <p class="my-6 font-['Manrope'] text-2xl font-normal leading-8 text-black">
                 Написать отзыв
             </p>
@@ -81,5 +80,6 @@
                 Отправить
             </button>
         </div>
+        <x-comment :reviews=$reviews/>
     </div>
 </form>
