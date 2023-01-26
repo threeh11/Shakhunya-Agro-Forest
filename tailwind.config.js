@@ -21,5 +21,5 @@ module.exports = {
     },
     colors: {'head': '#FAFAFA', 'gray': '#707070', 'black': '#333333', 'accent': '#FFED4E', 'orange': '#f97316', 'grayUltraLight': '#E7E7E7', 'grayLight': '#CCCCCC', 'red':'#DC143C'}
   },
-  plugins: [require("daisyui")],
+  //plugins: [require("daisyui")],
 }
