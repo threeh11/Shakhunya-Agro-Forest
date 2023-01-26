@@ -131,6 +131,13 @@ function getContacts() {
     remoteOther('contacts');
 }
 
+function start() {
+    $('#showImage').centerImage();
+    $('#placePhoto').center();
+    $('#modalBuy').center();
+    $('#modal').center();
+}
+
 $.fn.extend({
     center: function () {
         return this.each(function() {
@@ -148,11 +155,98 @@ $.fn.extend({
     }
 });
 
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+function setCookie(name, value, options = {}) {
+
+    options = {
+        path: '/',
+        ...options
+    };
+
+    if (options.expires instanceof Date) {
+        options.expires = options.expires.toUTCString();
+    }
+
+    let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+    for (let optionKey in options) {
+        updatedCookie += "; " + optionKey;
+        let optionValue = options[optionKey];
+        if (optionValue !== true) {
+            updatedCookie += "=" + optionValue;
+        }
+    }
+
+    document.cookie = updatedCookie;
+}
+
+function deleteCookie(name) {
+    setCookie(name, "", {
+        'max-age': -1
+    })
+}
+
+function getIdFavorites(count) {
+    let idArray = [];
+    for (let i = 0; i < count; i++)
+    {
+        idArray[i] = 'removeFavorites_' + (i+1);
+    }
+    return idArray;
+}
+
+function getAddIdFavorites(count) {
+    let idArray = [];
+    for (let i = 0; i < count; i++)
+    {
+        idArray[i] = 'addFavorites_' + (i+1);
+    }
+    return idArray;
+}
+
 $(document).ready(function() {
-    $('#showImage').centerImage();
-    $('#placePhoto').center();
-    $('#modalBuy').center();
-    $('#modal').center();
+    start();
+
+    $('#addFavoritesProduct').click(function () {
+        let cokies = getCookie('productsId') === undefined ? '' : getCookie('productsId');
+        const productId = $('#productId').text();
+        cokies += !cokies.includes(String(productId)) ? ' ' + String(productId) : '';
+        setCookie('productsId', cokies, {samesite: 'strict'});
+        $('#svgFavorites').addClass('fill-[#FFED4E]').addClass('stroke-[#FFED4E]');
+    });
+
+    if (window.location.pathname === '/favorites') {
+        let countFavorites = Number($('#productsCount').text());
+        let idFavorites = getIdFavorites(countFavorites);
+        for (let i = 0; i < countFavorites; i++) {
+            $('#' + idFavorites[i]).click(function() {
+                let cokies = getCookie('productsId') === undefined ? '' : getCookie('productsId');
+                deleteCookie('productsId');
+                cokies = cokies.replace('  ', '').replace(String($(this).attr('name')), '');
+                setCookie('productsId', cokies, {samesite: 'strict'});
+                location.reload();
+            });
+        }
+    }
+    if (window.location.pathname === '/') {
+        let countFavorites = Number($('#productsCount').text());
+        console.log(countFavorites);
+        let idFavorites = getAddIdFavorites(countFavorites);
+        console.log(idFavorites);
+        for (let i = 0; i < countFavorites; i++) {
+            $('#' + idFavorites[i]).click(function() {
+                let cokies = getCookie('productsId') === undefined ? '' : getCookie('productsId');
+                const productId = String($(this).attr('name'));
+                cokies += !cokies.includes(String(productId)) ? ' ' + String(productId) : '';
+                setCookie('productsId', cokies, {samesite: 'strict'});
+                $(this).children('path').addClass('fill-[#FFED4E]').addClass('stroke-[#FFED4E]');
+            });
+        }
+    }
 
     let mainImage = $('#image3');
 
@@ -178,7 +272,7 @@ $(document).ready(function() {
                 height: '100%'
             });
             $(document).mouseup(function (e){
-                var div = $('#showImage');
+                let div = $('#showImage');
                 if (!div.is(e.target) && div.has(e.target).length === 0) {
                     $('html, body').css({
                         overflow: 'auto',
