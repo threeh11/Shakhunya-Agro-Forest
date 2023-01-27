@@ -52,9 +52,6 @@
             <x-h3menu id="questionMenu">
                 <nobr>
                     Вопросы
-                    <sup class="text-[#707070] font-['Manrope'] font-normal text-sm">
-                        {{ count($questions) }}
-                    </sup>
                 </nobr>
             </x-h3menu>
             <x-h3menu id="contactsMenu">
