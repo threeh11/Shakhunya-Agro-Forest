@@ -30,5 +30,5 @@ module.exports = {
             'red': '#DC143C'
         }
     },
-    plugins: [require("daisyui")],
+    // plugins: [require("daisyui")],
 }
