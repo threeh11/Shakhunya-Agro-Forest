@@ -262,27 +262,6 @@ $(document).ready(function() {
         $(this).attr('src', tmpPath)
     });
 
-    mainImage.click(function (e){
-        if(!$('#modalBuy').hasClass('block'))
-        {
-            $('#placePhoto').removeClass('hidden')
-            $('#showImage').attr('src', $(this).attr('src'))
-            $('html, body').css({
-                overflow: 'hidden',
-                height: '100%'
-            });
-            $(document).mouseup(function (e){
-                let div = $('#showImage');
-                if (!div.is(e.target) && div.has(e.target).length === 0) {
-                    $('html, body').css({
-                        overflow: 'auto',
-                        height: 'auto'
-                    });
-                    $('#placePhoto').addClass('hidden')
-                }
-            });
-        }
-    });
 
     $('#descriptionMenu').click(function (){
         getDescription();
@@ -308,6 +287,7 @@ $(document).ready(function() {
             height: '100%'
         });
     })
+
     $('#closeModal').click(function (){
         $('#modalBuy')
             .removeClass('block')
@@ -316,6 +296,7 @@ $(document).ready(function() {
         .removeClass('hidden')
         .addClass('block');
     })
+
     $('#typeIconNotOpenDownMenu').click(function (){
         $('#typeIconNotOpenDownMenu')
             .addClass('hidden')

@@ -1,7 +1,6 @@
 @extends('layouts.base')
 
 @include('includes.modalBuy')
-@include('includes.modalPhoto')
 
 @section('content')
     <x-content @class(['mt-10'])>
