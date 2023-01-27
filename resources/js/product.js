@@ -437,10 +437,10 @@ $(document).ready(function() {
     });
 
 
-        $('html, body').css({
-            overflow: 'auto',
-            height: 'auto'
-        });
+    $('html, body').css({
+        overflow: 'auto',
+        height: 'auto'
+    });
 
     if($("#hasErrorModal").get(0)){
         $('#modalBuy')
@@ -454,6 +454,10 @@ $(document).ready(function() {
 
     if($("#hasErrorReviews").get(0)){
         getReviews();
+    }
+
+    if($("#hasErrorQuestions").get(0)){
+        getQuestions();
     }
 });
 

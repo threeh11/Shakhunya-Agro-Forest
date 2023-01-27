@@ -23,5 +23,6 @@ return [
         'advantages' => 'приемущества',
         'disadvantages' => 'недостатки',
         'comment' => 'комментарий',
+        'textQuestions' => 'текста вопроса'
     ],
 ];
