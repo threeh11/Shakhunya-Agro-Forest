@@ -21,15 +21,15 @@
                     @endif
                 @endforeach
             </div>
-            <div class="flex flex-row justify-between">
-                <div class="flex flex-col pl-10 w-[87%] lg:pl-0">
+            <div class="flex flex-row justify-between w-[87%]">
+                <div class="flex flex-col pl-10 lg:pl-0 w-[100%]">
                     <h1 class="text-[#333333] font-['Manrope'] text-3xl  leading-10 font-normal pb-7">
                         {{ $product->name }}
                     </h1>
                     <p class="pb-8 text-2xl leading-10 ">
                         {{ $product->price }}
                     </p>
-                    <button class="w-[43%] bg-[#FFED4E] p-3 text-[#333333] font-['Manrope'] text-base leading-5 hover:p-3.5 hover:w-[45%] hover:drop-shadow-lg duration-300" id="buttonBuy">
+                    <button class="w-[43%] bg-[#FFED4E] p-3 text-[#333333] font-['Manrope'] text-base leading-5" id="buttonBuy">
                         Купить
                     </button>
                 </div>
