@@ -208,6 +208,15 @@ function getAddIdFavorites(count) {
     return idArray;
 }
 
+function getIdStars(){
+    let idArray = [];
+    for (let i = 0; i < 5; i++)
+    {
+        idArray[i] = 'star_' + (i+1);
+    }
+    return idArray;
+}
+
 $(document).ready(function() {
     start();
 
@@ -440,5 +449,32 @@ $(document).ready(function() {
     if($("#hasErrorQuestions").get(0)){
         getQuestions();
     }
+
+    let starsId = getIdStars();
+    for (let i = 0; i < 5; i++) {
+        $('#' + starsId[i]).click(function() {
+            for(let y = 0; y < 5; y++) {
+                let star = $('#' + starsId[y]);
+                if (typeof star.attr('checked') !== typeof undefined && star.attr('checked') !== false) {
+                    star.removeAttr('checked');
+                }
+            }
+            $(this).attr('checked', true);
+        });
+    }
+
+    $('#customSaveForm').click(function () {
+        let starsId = getIdStars();
+        let rating = 0;
+        for (let i = 0; i < 5; i++) {
+            for(let y = 0; y < 5; y++) {
+                let star = $('#' + starsId[y]);
+                if (typeof star.attr('checked') !== typeof undefined && star.attr('checked') !== false) {
+                    rating = y + 1;
+                    $('#ratingInput').attr('value', rating);
+                }
+            }
+        }
+    });
 });
 

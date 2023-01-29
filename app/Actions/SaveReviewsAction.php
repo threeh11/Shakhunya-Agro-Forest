@@ -23,7 +23,7 @@ class SaveReviewsAction
 
         $this->reviewModel::create([
             'date_write' => now()->toDate(),
-            'rating' => 5,
+            'rating' => $validData['rating'],
             'name' => $validData['nameReview'],
             'phone' => $validData['numberReview'],
             'email' => $validData['emailReview'],

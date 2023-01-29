@@ -9,6 +9,7 @@ use App\Http\Requests\StoreFormRequest;
 use App\Http\Requests\StoreQuestionFormRequest;
 use App\Http\Requests\StoreReviewsFormRequest;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
@@ -47,7 +48,7 @@ class MainController extends Controller
             );
     }
 
-    public function saveReviews(int $idProduct): RedirectResponse
+    public function saveReviews(Request $request, int $idProduct): RedirectResponse
     {
         $validDate = $this->storeReviewsFormRequest->validated();
         $isSave = $this->saveReviews->handle($validDate, $idProduct);

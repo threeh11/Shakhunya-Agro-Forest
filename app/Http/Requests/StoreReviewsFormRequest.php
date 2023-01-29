@@ -20,6 +20,7 @@ class StoreReviewsFormRequest extends FormRequest
             'advantages' => ['required', 'string', 'max:1000', 'min:3'],
             'disadvantages' => ['required', 'string', 'max:1000', 'min:3'],
             'comment' => ['required', 'string', 'max:1000', 'min:3'],
+            'rating' => ['required', 'integer', 'min:1', 'max:5']
         ];
     }
 }
