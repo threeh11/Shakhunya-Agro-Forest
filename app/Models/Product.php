@@ -13,6 +13,8 @@ class Product extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = [
         'name',
         'price',

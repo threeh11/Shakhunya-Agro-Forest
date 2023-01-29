@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Actions\SaveBuyAction;
 use App\Actions\SaveReviewsAction;
 use App\Actions\SaveQuestionsAction;
+use App\Actions\UpdateRatingOnProduct;
 use App\Http\Requests\StoreFormRequest;
 use App\Http\Requests\StoreQuestionFormRequest;
 use App\Http\Requests\StoreReviewsFormRequest;
@@ -19,6 +20,7 @@ class MainController extends Controller
     private SaveBuyAction $saveBuy;
     private SaveReviewsAction $saveReviews;
     private SaveQuestionsAction $saveQuestions;
+    private UpdateRatingOnProduct $updateRatingOnProduct;
 
     public function __construct(
         StoreFormRequest $storeFormRequest,
@@ -27,6 +29,7 @@ class MainController extends Controller
         SaveQuestionsAction $saveQuestions,
         StoreReviewsFormRequest $storeReviewsFormRequest,
         SaveReviewsAction $saveReviews,
+        UpdateRatingOnProduct $updateRatingOnProduct,
     ) {
         $this->storeFormRequest = $storeFormRequest;
         $this->storeQuestionsFormRequest = $storeQuestionFormRequest;
@@ -34,6 +37,7 @@ class MainController extends Controller
         $this->saveQuestions = $saveQuestions;
         $this->storeReviewsFormRequest = $storeReviewsFormRequest;
         $this->saveReviews = $saveReviews;
+        $this->updateRatingOnProduct = $updateRatingOnProduct;
     }
 
     public function saveBuy(int $idProduct): RedirectResponse
@@ -52,6 +56,8 @@ class MainController extends Controller
     {
         $validDate = $this->storeReviewsFormRequest->validated();
         $isSave = $this->saveReviews->handle($validDate, $idProduct);
+
+        $this->updateRatingOnProduct->handle($idProduct);
 
         return redirect()->route('product', $idProduct)
             ->with(
