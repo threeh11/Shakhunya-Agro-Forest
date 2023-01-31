@@ -92,16 +92,11 @@
                     </div>
                 </form>
                 <form>
-                    <button class="min-w-[286px] min-h-[46px] mt-[30px] font-[Manrope] font-normal bg-[#FFED4E] rounded hover:border hover:shadow-md">Сбросить</button>
+                    <button class="min-w-[286px] min-h-[46px] mt-[30px] font-[Manrope] font-normal bg-[#FFED4E] rounded">Сбросить</button>
                 </form>
             </div>
         </div>
         <div class="flex flex-col min-w-[286px] mt-[163px] lg:items-center lg:mt-[20px]">
-            <select class="select-bordered w-full max-w-[286px] border rounded-[5px] px-[16px] py-[12px] mb-[20px] font-[Manrope] font-normal not-italic text-[16px] text-black">
-                <option disabled selected class="font-[Manrope] font-normal not-italic text-[16px] text-black">сортировать</option>
-                <option class="font-[Manrope] font-normal not-italic text-[16px] text-black">по убыванию цены</option>
-                <option class="font-[Manrope] font-normal not-italic text-[16px] text-black">по возрастанию цены</option>
-            </select>
             <div class="flex flex-wrap flex-row shrink-[0] gap-[20px] lg:justify-center sm:flex-col sm:items-center">
                 <p class="hidden" id="productsCount">{{ count($products) }}</p>
                 @foreach($products as $product)

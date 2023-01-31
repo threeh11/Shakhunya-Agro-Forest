@@ -11,7 +11,7 @@
             <p class="my-6 font-['Manrope'] text-2xl font-normal leading-8 text-black">
                 Написать отзыв
             </p>
-            <div class="my-2.5 flex flex-row">
+            <div class="my-2.5 flex flex-row items-center">
                 <p class="font-['Manrope'] text-base font-bold leading-5 text-black">
                     Оценка товара
                 </p>

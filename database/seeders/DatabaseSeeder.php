@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             ContactSeeder::class,
             ProductSeeder::class,
         ]);
-//        Question::factory()->count(500)->create();
-//        Review::factory()->count(500)->create();
+        Question::factory()->count(500)->create();
+        Review::factory()->count(500)->create();
     }
 }

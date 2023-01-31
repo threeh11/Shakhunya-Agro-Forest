@@ -6,7 +6,7 @@
     'price' => '',
 ])
 
-    <div class="flex flex-col w-[286px] h-[375px] border rounded-[5px] p-[16px] z-2">
+    <div class="flex flex-col w-[286px] h-[375px] border border-[#CCCCCC] rounded-[5px] p-[16px] z-2">
         {{ $slot }}
         <a href="{{ route('product', $id) }}" >
             <img src="https://sun9-59.userapi.com/impg/DAPpVXgTqaIaOurCnHzLr1LGiA0-CTKIPjmUjw/12b68k21pI8.jpg?size=254x234&quality=96&sign=33f7bf9c0e0ff8561f2d103bdbf4331e&type=album" alt="">
