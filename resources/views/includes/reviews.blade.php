@@ -18,7 +18,7 @@
                 <x-starts/>
             </div>
             <div class="flex flex-row sm:flex-col">
-                <div class="flex flex-col sm:w-[74.58%] w-[23.85%] mr-[1.7%]">
+                <div class="flex flex-col sm:w-[100%] w-[23.85%] mr-[1.7%]">
                     <x-inputReviews
                         placeholder="Имя"
                         title="Введите имя на русском языке, не используя цифр"
@@ -32,7 +32,7 @@
                     <x-validationError message="{{ $message }}"/>
                     @enderror
                 </div>
-                <div class="flex flex-col sm:w-[74.58%] w-[23.85%] mr-[1.7%]">
+                <div class="flex flex-col sm:w-[100%] w-[23.85%] mr-[1.7%]">
                     <x-inputReviews
                         placeholder="Телефон"
                         title="Введите номер телефона в формате 82345678899"
@@ -46,7 +46,7 @@
                     <x-validationError message="{{ $message }}"/>
                     @enderror
                 </div>
-                <div class="flex flex-col sm:w-[74.58%] w-[23.85%] mr-[1.7%]">
+                <div class="flex flex-col sm:w-[100%] w-[23.85%] mr-[1.7%]">
                     <x-inputReviews
                         placeholder="Электронная почта"
                         title="Введите адрес в формате example@site.com"
@@ -76,7 +76,7 @@
             <input id="ratingInput" type="text" name="rating" class="hidden" value="5">
             <button
                 id="customSaveForm"
-                class="my-2.5 w-[23.75%] bg-[#FFED4E] min-w-fit h-11 float-left p-1 text-center rounded">
+                class="my-2.5 w-[23.75%] sm:w-[100%] bg-[#FFED4E] min-w-fit h-11 float-left p-1 text-center rounded">
                 Отправить
             </button>
         </div>

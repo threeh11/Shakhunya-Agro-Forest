@@ -6,7 +6,7 @@
     <x-content @class(['mt-10'])>
         <p class="hidden" id="productId">{{ $product->id }}</p>
         <x-breadcrumb :product=$product />
-        <div class="flex flex-row w-full h-[592px] lg:flex-col lg:mb-[250px]">
+        <div class="flex flex-row w-full h-[592px] lg:flex-col lg:mb-[250]">
             <div class="flex flex-row gap-2 shrink-0 lg:flex-col">
                 @foreach($listImages as $image)
                     @if (1  === $loop->iteration)
@@ -58,6 +58,17 @@
                 Контакты
             </x-h3menu>
         </div>
+
+        <!-- <select class="select select-bordered w-[90%] max-w-[286px] border rounded-[5px] px-[16px] py-[12px] mb-[20px] font-[Manrope] font-normal not-italic text-[16px] text-black flex flex-row align-middle">
+                <option disabled selected>Описание</option>
+                <option class="font-[Manrope] font-normal not-italic text-[16px] text-black" id="descriptionMenu">Описание</option>
+                <option class="font-[Manrope] font-normal not-italic text-[16px] text-black" id="reviewsMenu">Отзывы</option>
+                <option class="font-[Manrope] font-normal not-italic text-[16px] text-black" id="questionMenu"><x-h3menu id="questionMenu">
+                <nobr>
+                    Вопросы
+                </nobr></x-h3menu></option>
+                <option class="font-[Manrope] font-normal not-italic text-[16px] text-black" id="contactsMenu">Контакты</option>
+        </select> -->
 
 
         @include('includes.reviews')
