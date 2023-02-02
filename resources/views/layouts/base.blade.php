@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,20 +8,20 @@
     @vite('resources/css/app.css')
     <title>@yield('title', env('APP_NAME'))</title>
 </head>
-<body class="h-screen flex min-h-screen flex-col justify-between">
+<body class="flex flex-col justify-between h-screen min-h-screen">
     @if (session()->has('error'))
-        <div class="alert alert-error shadow-lg w-min whitespace-nowrap my-6 flex justify-center absolute left-0 right-0 mx-auto slide-card z-50">
+        <div class="absolute left-0 right-0 z-50 flex justify-center mx-auto my-6 shadow-lg alert alert-error w-min whitespace-nowrap slide-card">
             <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 <span>{{ session()->get('error') }}</span>
             </div>
         </div>
     @endif
 
     @if (session()->has('success'))
-        <div class="alert alert-success shadow-lg w-min whitespace-nowrap my-6 flex justify-center absolute left-0 right-0 mx-auto slide-card z-50">
+        <div class="absolute left-0 right-0 z-50 flex justify-center mx-auto my-6 shadow-lg alert alert-success w-min whitespace-nowrap slide-card">
             <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 <span>{{ session()->get('success') }}</span>
             </div>
         </div>

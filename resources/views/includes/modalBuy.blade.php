@@ -1,4 +1,4 @@
-<div class="bg-black bg-opacity-60 h-screen w-full hidden drop-shadow-2xl " id="modalBuy">
+<div class="hidden w-full h-screen bg-black bg-opacity-60 drop-shadow-2xl " id="modalBuy">
     <div class="w-[500px] h-[650px] @if($errors->any()) h-[750px] @endif top-[20%] left-[20%] fixed rounded-xl bg-[#FFFFFF]" id="modal">
         <div class="bg-white flex flex-col px-[19px] pt-[25px] pb-[10px]">
             <p class="text-[#333333] leading-8 text-2xl font-normal font-[Manrope] pb-3">
