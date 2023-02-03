@@ -11,7 +11,7 @@
                 Задать вопрос
             </p>
             <div class="flex flex-row sm:grid">
-                <div class="flex flex-col sm:w-[74.58%] w-[23.85%] mr-[1.7%]">
+                <div class="flex flex-col sm:w-[100%] w-[23.85%] mr-[1.7%]">
                     <x-inputQuestions
                         placeholder="Имя"
                         title="Введите имя на русском языке, не используя цифр"
@@ -22,7 +22,7 @@
                         <x-validationError message="{{ $message }}"/>
                     @enderror
                 </div>
-                <div class="flex flex-col sm:w-[74.58%] w-[23.85%] mr-[1.7%]">
+                <div class="flex flex-col sm:w-[100%] w-[23.85%] mr-[1.7%]">
                     <x-inputQuestions
                         placeholder="Телефон"
                         title="Введите номер телефона в формате 82345678899"
@@ -33,7 +33,7 @@
                         <x-validationError message="{{ $message }}"/>
                     @enderror
                 </div>
-                <div class="flex flex-col sm:w-[74.58%] w-[23.85%] mr-[1.7%]">
+                <div class="flex flex-col sm:w-[100%] w-[23.85%] mr-[1.7%]">
                     <x-inputQuestions
                         placeholder="Электронная почта"
                         title="Введите адрес в формате example@site.com"
@@ -47,7 +47,7 @@
             </div>
             <textarea
                 name="textQuestions"
-                class="mt-2.5 p-3 border rounded border-solid resize-none sm:w-[73.25%] w-[74.58%] h-32 border-[#CCCCCC]
+                class="mt-2.5 p-3 border rounded border-solid resize-none sm:w-[100%] w-[74.58%] h-32 border-[#CCCCCC]
                 @if($errors->has('textQuestions')) border-red @endif">
                 {{ old('textQuestions') }}
             </textarea>
