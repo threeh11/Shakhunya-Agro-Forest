@@ -35,4 +35,5 @@
             </p>
         </div>
     @endforeach
+    {{ $reviews->links("vendor.pagination.simple-tailwind") }}
 @endif

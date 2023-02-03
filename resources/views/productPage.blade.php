@@ -11,12 +11,12 @@
                 @foreach($listImages as $image)
                     @if (1  === $loop->iteration)
                         <div class="flex flex-col gap-2 lg:flex-row lg:order-1">
-                            <img class="w-[110px] h-[110px] " src="{{ asset($image) }}" alt="{{ $product->name }}" id="{{ 'image' . $loop->iteration }}">
+                            <img class="rounded-3xl w-[110px] h-[110px] " src="{{ asset($image) }}" alt="{{ $product->name }}" id="{{ 'image' . $loop->iteration }}">
                     @elseif (2 === $loop->iteration)
-                            <img class="w-[110px] h-[110px] " src="{{ asset($image) }}" alt="{{ $product->name }}" id="{{ 'image' . $loop->iteration }}">
+                            <img class="rounded-3xl w-[110px] h-[110px] " src="{{ asset($image) }}" alt="{{ $product->name }}" id="{{ 'image' . $loop->iteration }}">
                         </div>
                     @elseif (3 === $loop->iteration)
-                        <img class="w-[472px] h-[454px] sm:w-[236px] sm:h-[227px]" src="{{ asset($image) }}" alt="{{ $product->name }}" id="{{ 'image' . $loop->iteration }}">
+                        <img class="w-[472px] h-[454px] sm:w-[236px] sm:h-[227px] rounded-3xl" src="{{ asset($image) }}" alt="{{ $product->name }}" id="{{ 'image' . $loop->iteration }}">
                     @endif
                 @endforeach
             </div>
@@ -28,7 +28,7 @@
                     <p class="pb-8 text-2xl leading-10 ">
                         {{ $product->price }}
                     </p>
-                    <button class="w-[43%] bg-[#FFED4E] p-3 text-[#333333] font-['Manrope'] text-base leading-5" id="buttonBuy">
+                    <button class="w-[43%] rounded-lg min-w-fit bg-[#FFED4E] p-3 text-[#333333] font-['Manrope'] text-base leading-5" id="buttonBuy">
                         Купить
                     </button>
                 </div>

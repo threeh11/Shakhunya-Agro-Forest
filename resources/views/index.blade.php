@@ -78,7 +78,7 @@
                         </div>
                     </div>
                 <form class="flex flex-col justify-between mt-[30px]">
-                    <p class="flex flex-row font-bold items-center select-none"> Цена, ₽
+                    <p class="flex flex-row items-center font-bold select-none"> Цена, ₽
                         <svg class="ml-[10px] block" id="priceIconNotOpenDownMenu" width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L6 5.5L1 10" stroke="#707070" stroke-width="2"/>
                         </svg>
