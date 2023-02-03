@@ -23,8 +23,6 @@ class PagesController extends Controller
     private GetCookiesAsArray $getCookies;
     private SearchRequest $searchRequest;
 
-
-
     public function __construct(
         GetProductAction $getProduct,
         GetReviewsAction $getReviews,
