@@ -54,7 +54,7 @@
             @error('textQuestions')
                     <x-validationError message="{{ $message }}"/>
             @enderror
-            <button class="my-2.5 p-1 bg-[#FFED4E] w-[23.75%] min-w-fit h-11 float-left text-center rounded">
+            <button class="mt-5 mb-2.5 p-1 bg-[#FFED4E] w-[23.75%] min-w-fit h-11 float-left text-center rounded-lg">
                     Отправить
             </button>
         </div>

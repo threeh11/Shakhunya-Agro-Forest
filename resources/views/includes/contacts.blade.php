@@ -11,7 +11,7 @@
             <x-elemContacts name="Наименование" value="{{ $contacts[0]->naming }}"/>
             <x-elemContacts name="КПП" value="{{ $contacts[0]->KPP }}"/>
         </div>
-        <div class="flex flex-wrap justify-between">
+        <div class="flex flex-wrap justify-between mb-5">
             <x-elemContacts name="Юридический адрес" value="{{ $contacts[0]->legal_address }}"/>
             <x-elemContacts name="Дата регистрации" value="{{ $contacts[0]->date_reg }}"/>
         </div>

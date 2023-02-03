@@ -76,7 +76,7 @@
             <input id="ratingInput" type="text" name="rating" class="hidden" value="5">
             <button
                 id="customSaveForm"
-                class="my-2.5 w-[23.75%] bg-[#FFED4E] h-11 float-left p-1 text-center rounded">
+                class="mt-5 mb-2.5 w-[23.75%] bg-[#FFED4E] h-11 float-left p-1 text-center min-w-fit rounded-lg">
                 Отправить
             </button>
         </div>
