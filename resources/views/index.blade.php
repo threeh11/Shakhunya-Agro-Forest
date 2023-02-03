@@ -2,14 +2,25 @@
 
 @section('content')
 <main class="grow">
-    <div class="flex flex-row relative mx-[18%] lg:flex-col lg:flex-wrap lg:justify-center lg:mx-0 lg:items-center" >
-        <div class="min-w-[286px] flex flex-col top-[20px] mt-[30px] mr-[21px] sm:justify-center lg:mt-0 lg:mr-0">
-            <div>
-                <div class="not-italic text-[14px] text-gray"><a href="#" class="not-italic text-[14px] text-gray">Каталог</a>/ Пиломатериалы</div>
-                <p class="not-italic text-[32px]">Пиломатериалы</p>
-                <p class="not-italic text-[14px] text-gray">Отображено 8 из 8 товаров</p>
+    <div class="flex flex-col relative mx-[18%] lg:flex-col lg:flex-wrap lg:justify-center lg:mx-0 lg:items-center" >
+        <div class="flex justify-between lg:flex-wrap lg:justify-center">
+            <!-- <div class="min-w-[286px] flex flex-col top-[20px] mt-[30px] mr-[21px] sm:justify-center lg:mt-0 lg:mr-0 ">
+                <div>
+                    <div class="not-italic text-[14px] text-gray"><a href="#" class="not-italic text-[14px] text-gray">Каталог</a>/ Пиломатериалы</div>
+                    <p class="not-italic text-[32px]">Пиломатериалы</p>
+                    <p class="not-italic text-[14px] text-gray">Отображено 8 из 8 товаров</p>
+                </div>
+            </div> -->
+            <div class="flex flex-col my-[40px] max-w-[400px] sm:mx-[18%]">
+                <p class="text-xl text-[#7A1616] font-extrabold">ПРОИЗВОДСТВО И ПОСТАВКА ПИЛОМАТЕРИАЛОВ ПО ВСЕЙ РОССИИ И НА ЭКСПОРТ</p>
             </div>
-            <div>
+        </div>
+        <div class="border-y">
+            <div class=" my-[30px]">
+                @include('includes.descriptions')
+            </div>
+        </div>
+            <!-- <div>
                 <form>
                     <div class="flex flex-row mt-[35px] font-bold items-center select-none">Тип
                             <svg class="ml-[10px] block" id="typeIconNotOpenDownMenu" width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,8 +106,8 @@
                     <button class="min-w-[286px] min-h-[46px] mt-[30px] font-[Manrope] font-normal bg-[#FFED4E] rounded">Сбросить</button>
                 </form>
             </div>
-        </div>
-        <div class="flex flex-col min-w-[286px] mt-[163px] lg:items-center lg:mt-[20px]">
+        </div> -->
+        <div class="flex flex-col min-w-[286px] mt-[50px] lg:items-center lg:mt-[20px]">
             <div class="flex flex-wrap flex-row shrink-[0] gap-[20px] lg:justify-center sm:flex-col sm:items-center">
                 <p class="hidden" id="productsCount">{{ count($products) }}</p>
                 @foreach($products as $product)
@@ -106,9 +117,9 @@
                             rating="{{ $product->rating }}"
                             name="{{ $product->name }}"
                             price="{{ $product->price }}">
-                            <svg class="absolute mt-[12px] ml-[12px] cursor-pointer" id="addFavorites_{{ $loop->iteration }}" name="{{ $product->id }}" width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="@if(Helper::isFavorites($product->id)) fill-[#FFED4E] stroke-[#FFED4E] @endif" d="M0.863482 21.1579L0.861952 21.1571C0.752537 21.0956 0.66143 21.0061 0.597955 20.8978C0.53454 20.7896 0.500981 20.6666 0.500701 20.5412V2.81542H0.500828L0.500574 2.80415C0.487203 2.21104 0.7081 1.63656 1.11539 1.2052C1.52079 0.775847 2.07834 0.522724 2.66818 0.5H14.2499C14.8397 0.522724 15.3973 0.775847 15.8027 1.2052C16.21 1.63656 16.4309 2.21104 16.4175 2.80415L16.4174 2.80415V2.81542V20.54C16.4164 20.6632 16.3833 20.7839 16.3214 20.8904C16.2593 20.9973 16.1703 21.086 16.0632 21.1478L16.3132 21.5808L16.0632 21.1478C15.9555 21.21 15.8334 21.2427 15.709 21.2427C15.5847 21.2427 15.4625 21.21 15.3549 21.1478L15.3512 21.1457L8.49995 17.267L8.24622 17.1233L7.99625 17.2734L1.55583 21.1401L1.55581 21.14L1.54951 21.1439C1.4451 21.2087 1.32566 21.2453 1.20295 21.2499C1.08389 21.2483 0.967133 21.2167 0.863482 21.1579Z" fill="white" stroke="#333333"/>
-                            </svg>
+                            <!-- <svg class="absolute mt-[12px] ml-[12px] cursor-pointer" id="addFavorites_{{ $loop->iteration }}" name="{{ $product->id }}" width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="hover:fill-[#FFED4E] hover:stroke-[#FFED4E] @if(Helper::isFavorites($product->id)) fill-[#FFED4E] stroke-[#FFED4E] @endif" d="M0.863482 21.1579L0.861952 21.1571C0.752537 21.0956 0.66143 21.0061 0.597955 20.8978C0.53454 20.7896 0.500981 20.6666 0.500701 20.5412V2.81542H0.500828L0.500574 2.80415C0.487203 2.21104 0.7081 1.63656 1.11539 1.2052C1.52079 0.775847 2.07834 0.522724 2.66818 0.5H14.2499C14.8397 0.522724 15.3973 0.775847 15.8027 1.2052C16.21 1.63656 16.4309 2.21104 16.4175 2.80415L16.4174 2.80415V2.81542V20.54C16.4164 20.6632 16.3833 20.7839 16.3214 20.8904C16.2593 20.9973 16.1703 21.086 16.0632 21.1478L16.3132 21.5808L16.0632 21.1478C15.9555 21.21 15.8334 21.2427 15.709 21.2427C15.5847 21.2427 15.4625 21.21 15.3549 21.1478L15.3512 21.1457L8.49995 17.267L8.24622 17.1233L7.99625 17.2734L1.55583 21.1401L1.55581 21.14L1.54951 21.1439C1.4451 21.2087 1.32566 21.2453 1.20295 21.2499C1.08389 21.2483 0.967133 21.2167 0.863482 21.1579Z" fill="white" stroke="#333333"/>
+                            </svg> -->
                         </x-product>
                 @endforeach
             </div>

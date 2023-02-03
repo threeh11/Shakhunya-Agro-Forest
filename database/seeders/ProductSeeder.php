@@ -62,6 +62,16 @@ class ProductSeeder extends Seeder
                 'storage/поддоны_3.jpg',
         ]);
 
+        
+        DB::table('products')->insert([
+            'name' => 'Черенки',
+            'description' => $text,
+            'path_to_images' =>
+            'storage/черенки_1.jpg' . ' ' .
+            'storage/черенки_2.jpg' . ' ' .
+            'storage/черенки_3.jpg',
+        ]);
+        
         DB::table('products')->insert([
             'name' => 'Сушка пиломатериала',
             'description' => $text,
@@ -69,15 +79,6 @@ class ProductSeeder extends Seeder
                 'storage/сушка_материалов_1.jpg' . ' ' .
                 'storage/сушка_материалов_2.jpg' . ' ' .
                 'storage/сушка_материалов_3.jpg',
-        ]);
-
-        DB::table('products')->insert([
-            'name' => 'Черенки',
-            'description' => $text,
-            'path_to_images' =>
-                'storage/черенки_1.jpg' . ' ' .
-                'storage/черенки_2.jpg' . ' ' .
-                'storage/черенки_3.jpg',
         ]);
     }
 }
