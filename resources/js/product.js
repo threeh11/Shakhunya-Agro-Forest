@@ -220,58 +220,6 @@ function getIdStars(){
 $(document).ready(function() {
     start();
 
-    $('#addFavoritesProduct').click(function () {
-        let cokies = getCookie('productsId') === undefined ? '' : getCookie('productsId');
-        const productId = $('#productId').text();
-        cokies += !cokies.includes(String(productId)) ? ' ' + String(productId) : '';
-        setCookie('productsId', cokies, {samesite: 'strict'});
-        $('#svgFavorites').addClass('fill-[#FFED4E]').addClass('stroke-[#FFED4E]');
-    });
-
-    if (window.location.pathname === '/favorites') {
-        let countFavorites = Number($('#productsCount').text());
-        let idFavorites = getIdFavorites(countFavorites);
-        for (let i = 0; i < countFavorites; i++) {
-            $('#' + idFavorites[i]).click(function() {
-                let cokies = getCookie('productsId') === undefined ? '' : getCookie('productsId');
-                deleteCookie('productsId');
-                cokies = cokies.replace('  ', '').replace(String($(this).attr('name')), '');
-                setCookie('productsId', cokies, {samesite: 'strict'});
-                location.reload();
-            });
-        }
-    }
-    if (window.location.pathname === '/') {
-        let countFavorites = Number($('#productsCount').text());
-        console.log(countFavorites);
-        let idFavorites = getAddIdFavorites(countFavorites);
-        console.log(idFavorites);
-        for (let i = 0; i < countFavorites; i++) {
-            $('#' + idFavorites[i]).click(function() {
-                let cokies = getCookie('productsId') === undefined ? '' : getCookie('productsId');
-                const productId = String($(this).attr('name'));
-                cokies += !cokies.includes(String(productId)) ? ' ' + String(productId) : '';
-                setCookie('productsId', cokies, {samesite: 'strict'});
-                $(this).children('path').addClass('fill-[#FFED4E]').addClass('stroke-[#FFED4E]');
-            });
-        }
-    }
-
-    let mainImage = $('#image3');
-
-    $('#image1').click(function (){
-        let tmpPath = mainImage.attr('src')
-        mainImage.attr('src', $(this).attr('src'))
-        $(this).attr('src', tmpPath)
-    });
-
-    $('#image2').click(function (){
-        let tmpPath = mainImage.attr('src');
-        mainImage.attr('src', $(this).attr('src'))
-        $(this).attr('src', tmpPath)
-    });
-
-
     $('#descriptionMenu').click(function (){
         getDescription();
     });
@@ -284,6 +232,7 @@ $(document).ready(function() {
     $('#contactsMenu').click(function (){
         getContacts();
     });
+
     $('#buttonBuy').click(function (){
         $('#modalBuy')
             .removeClass('hidden')
@@ -304,133 +253,12 @@ $(document).ready(function() {
         $('#buttonBuy')
         .removeClass('hidden')
         .addClass('block');
+        $('html, body').css({
+            overflow: 'visible',
+            height: '100%'
+        });
     })
 
-    $('#typeIconNotOpenDownMenu').click(function (){
-        $('#typeIconNotOpenDownMenu')
-            .addClass('hidden')
-        $('#typeIconOpenDownMenu')
-            .removeClass('hidden')
-        $('#typeParameterInput')
-            .removeClass('hidden')
-    });
-
-    $('#typeIconOpenDownMenu').click(function (){
-        $('#typeIconOpenDownMenu')
-            .addClass('hidden')
-        $('#typeIconNotOpenDownMenu')
-            .removeClass('hidden')
-        $('#typeParameterInput')
-            .addClass('hidden')
-    });
-
-    $('#sizeIconNotOpenDownMenu').click(function (){
-        $('#sizeIconNotOpenDownMenu')
-            .addClass('hidden')
-        $('#sizeIconOpenDownMenu')
-            .removeClass('hidden')
-        $('#sizeParameterInput')
-            .removeClass('hidden')
-    });
-
-    $('#sizeIconOpenDownMenu').click(function (){
-        $('#sizeIconOpenDownMenu')
-            .addClass('hidden')
-        $('#sizeIconNotOpenDownMenu')
-            .removeClass('hidden')
-        $('#sizeParameterInput')
-            .addClass('hidden')
-    });
-
-    $('#priceIconNotOpenDownMenu').click(function (){
-        $('#priceIconNotOpenDownMenu')
-            .addClass('hidden')
-        $('#priceIconOpenDownMenu')
-            .removeClass('hidden')
-        $('#priceParameterInput')
-            .removeClass('hidden')
-    });
-
-    $('#priceIconOpenDownMenu').click(function (){
-        $('#priceIconOpenDownMenu')
-            .addClass('hidden')
-        $('#priceIconNotOpenDownMenu')
-            .removeClass('hidden')
-        $('#priceParameterInput')
-            .addClass('hidden')
-    });
-
-    $('#CheckBoxOff1').click(function (){
-        $('#CheckBoxOff1')
-            .addClass('hidden')
-        $('#CheckBoxOn1')
-            .removeClass('hidden')
-    });
-
-    $('#CheckBoxOn1').click(function (){
-        $('#CheckBoxOn1')
-            .addClass('hidden')
-        $('#CheckBoxOff1')
-            .removeClass('hidden')
-    });
-    $('#CheckBoxOff2').click(function (){
-        $('#CheckBoxOff2')
-            .addClass('hidden')
-        $('#CheckBoxOn2')
-            .removeClass('hidden')
-    });
-
-    $('#CheckBoxOn2').click(function (){
-        $('#CheckBoxOn2')
-            .addClass('hidden')
-        $('#CheckBoxOff2')
-            .removeClass('hidden')
-    });
-    $('#CheckBoxOff3').click(function (){
-        $('#CheckBoxOff3')
-            .addClass('hidden')
-        $('#CheckBoxOn3')
-            .removeClass('hidden')
-    });
-
-    $('#CheckBoxOn3').click(function (){
-        $('#CheckBoxOn3')
-            .addClass('hidden')
-        $('#CheckBoxOff3')
-            .removeClass('hidden')
-    });
-    $('#CheckBoxOff4').click(function (){
-        $('#CheckBoxOff4')
-            .addClass('hidden')
-        $('#CheckBoxOn4')
-            .removeClass('hidden')
-    });
-
-    $('#CheckBoxOn4').click(function (){
-        $('#CheckBoxOn4')
-            .addClass('hidden')
-        $('#CheckBoxOff4')
-            .removeClass('hidden')
-    });
-    $('#CheckBoxOff5').click(function (){
-        $('#CheckBoxOff5')
-            .addClass('hidden')
-        $('#CheckBoxOn5')
-            .removeClass('hidden')
-    });
-
-    $('#CheckBoxOn5').click(function (){
-        $('#CheckBoxOn5')
-            .addClass('hidden')
-        $('#CheckBoxOff5')
-            .removeClass('hidden')
-    });
-
-
-    $('html, body').css({
-        overflow: 'auto',
-        height: 'auto'
-    });
 
     if($("#hasErrorModal").get(0)){
         $('#modalBuy')

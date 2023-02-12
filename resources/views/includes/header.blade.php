@@ -4,7 +4,7 @@
         <div class="ml-[18%] flex flex-row items-center justify-items-center w-[62.7083333%] lg:ml-auto mx-auto lg:flex-col lg:w-[90%] lg:gap-[18px]">
             <div class="w-[18.6046512%] py-[35px] lg:w-[100%] lg:flex lg:justify-center lg:py-0 lg:mt-[18px]">
                 <a href="{{ route('index') }}" class="text-black whitespace-nowrap font-['Manrope'] order-1 non-italic text-[24px] font-bold leading-8 xl:text-base lg:text-lg">
-                    {{ env('APP_NAME') }}
+                    Шахунья-Лес Агро
                 </a>
             </div>
             <div class="flex flrx row sm:mb-[20px] w-[100%] lg:order-3 lg:mb-[18px]">

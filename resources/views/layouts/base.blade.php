@@ -36,6 +36,6 @@
 <script type="text/javascript" src="jquery.cookie.js"></script>
 
 @vite('resources/js/product.js')
-@vite('resources/js/saveReviews.js')
+
 </html>
 

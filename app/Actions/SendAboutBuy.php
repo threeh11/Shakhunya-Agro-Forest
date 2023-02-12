@@ -20,7 +20,7 @@ class SendAboutBuy
         $this->orderModel = $orderModel;
     }
 
-    public function handle(int $idProduct)
+    public function handle(int $idProduct): void
     {
         $productName = $this->productModel::find($idProduct)->name;
         $order = $this->orderModel::all()->last();

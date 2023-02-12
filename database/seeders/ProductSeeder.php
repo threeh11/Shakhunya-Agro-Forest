@@ -37,7 +37,7 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Пиломатериал хвойных, лиственых пород',
-            'description' => $text,
+            'description' => 'Обрезной, необрезной, полуобрезной, брус, лафет.  Размеры от 0,25-250см',
             'path_to_images' =>
                 'storage/Пиломатериал_хвойных_лиственых_пород_1.png' . ' ' .
                 'storage/Пиломатериал_хвойных_лиственых_пород_2.jpg' . ' ' .
@@ -46,7 +46,7 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Кругляк',
-            'description' => $text,
+            'description' => 'сосна, ель, береза, осина',
             'path_to_images' =>
                 'storage/кругляк_1.jpg' . ' ' .
                 'storage/кругляк_2.jpg' . ' ' .
@@ -55,7 +55,7 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Поддоны',
-            'description' => $text,
+            'description' => '800×1200,1000×1200,1140×1140,любой влажности',
             'path_to_images' =>
                 'storage/поддоны_1.jpg' . ' ' .
                 'storage/поддоны_2.jpg' . ' ' .
@@ -65,7 +65,7 @@ class ProductSeeder extends Seeder
         
         DB::table('products')->insert([
             'name' => 'Черенки',
-            'description' => $text,
+	    'description' => 'Береза-осина',
             'path_to_images' =>
             'storage/черенки_1.jpg' . ' ' .
             'storage/черенки_2.jpg' . ' ' .
@@ -74,7 +74,7 @@ class ProductSeeder extends Seeder
         
         DB::table('products')->insert([
             'name' => 'Сушка пиломатериала',
-            'description' => $text,
+            'description' => 'Сушка пиломатериала в итальянских сушилках любой влажности по тех.условиям заказчика.',
             'path_to_images' =>
                 'storage/сушка_материалов_1.jpg' . ' ' .
                 'storage/сушка_материалов_2.jpg' . ' ' .

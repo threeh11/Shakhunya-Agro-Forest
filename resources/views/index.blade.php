@@ -4,12 +4,15 @@
 <main class="grow">
     <div class="flex flex-col relative mx-[18%] lg:flex-col lg:flex-wrap lg:justify-center lg:mx-0 lg:items-center" >
         <div class="flex justify-between lg:flex-wrap lg:justify-center">
-            <div class="flex flex-col my-[40px] max-w-[400px] sm:mx-[18%]">
-                <p class="text-xl text-[#7A1616] font-extrabold">ПРОИЗВОДСТВО И ПОСТАВКА ПИЛОМАТЕРИАЛОВ ПО ВСЕЙ РОССИИ И НА ЭКСПОРТ</p>
+	    <div class="flex flex-col my-[40px] max-w-[400px] sm:pl-2">
+		<p class="indent-8 text-xl text-[#009900] font-extrabold">ПРОИЗВОДСТВО</p>
+		<p class="indent-8 text-xl text-[#009900] font-extrabold">И ПОСТАВКА ПИЛОМАТЕРИАЛОВ</p>
+		<p class="indent-8 text-xl text-[#009900] font-extrabold">ПО ВСЕЙ РОССИИ</p>
+		<p class="indent-8 text-xl text-[#009900] font-extrabold">И НА ЭКСПОРТ</p>
             </div>
         </div>
         <div class="border-y">
-            <div class=" my-[30px]">
+            <div class=" my-[10px]">
                 @include('includes.descriptions')
             </div>
         </div>

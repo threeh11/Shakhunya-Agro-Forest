@@ -29,7 +29,7 @@ class Helper
     public static function getImageProduct(int $idProduct): string
     {
         $strPathImages = Product::find($idProduct)->path_to_images;
-        return explode(' ', $strPathImages)[0];
+	return explode(' ', $strPathImages)[2];
     }
 
     public static function leadsToNormalAppearance(float $number): float
